@@ -50,10 +50,20 @@ this one compresses in a format the DS itself defines — while licensing CRI fo
 audio and Actimagine's Mobiclip for video and writing its own container. What
 Tempest's zero was about was not the machine.
 
-What it is about is still not fully settled, and [99](docs/99-open-questions.md)
-says so: both developers are outside the studio line, so "the codec travels with
-that codebase" survives this cartridge untouched. Narrowing that further needs a
-DS title *from* that line, and there is not one.
+What it is about is still not fully settled *on this machine*, and
+[99](docs/99-open-questions.md) says so: both developers are outside the studio
+line, so "the codec travels with that codebase" survives this cartridge
+untouched. This repository asked for a title *from* that line and said there was
+not one on the DS.
+
+**It was answered off the DS.** *Tales of Symphonia: Ratatosk no Kishi* (Wii,
+2008) is the direct sequel to the corpus's only PowerPC positive, from inside
+the studio line, on a Nintendo console — and it carries no codec either, with
+the strong byte test available for the first time across a console generation:
+**10 bytes** of shared decoder against **835** of shared SDK code. So the
+reading that the codebase had simply never shipped a Nintendo title is dead, and
+the two zeros here are facts about their two studios.
+[wii-talesofsymphoniadotnw-doc](https://github.com/vs-sr-dev/wii-talesofsymphoniadotnw-doc)
 
 ### Seven answers
 
@@ -191,7 +201,7 @@ real geometry and real internal names. [99](docs/99-open-questions.md)
 | 4,591 file names are not spelled out anywhere outside the name table | **Verified** as a count; *not* a count of unused files | [07](docs/07-media-and-budget.md), [99](docs/99-open-questions.md) |
 | The world map is named after a test scene | **Verified** as present; *Open* as to why | [99](docs/99-open-questions.md) |
 | The platform is excluded as the explanation for Tempest's zero | **Verified** — this cartridge compresses, in the platform's own format | [05](docs/05-block-codec.md) |
-| The *codebase* remains the surviving reading | *Open* — both DS developers are outside the studio line | [99](docs/99-open-questions.md) |
+| The *codebase* remains the surviving reading | **Confirmed in 2008** — a Wii build *from* the line returns the same zero, so the alternative is dead | [99](docs/99-open-questions.md) |
 
 ---
 

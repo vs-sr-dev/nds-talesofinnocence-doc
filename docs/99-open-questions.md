@@ -57,9 +57,9 @@ codec's constants are absent in both ARM encodings across 78,489 immediates,
 nothing. The unlocated routine is a BIOS-format `LZ77` decoder, which is a
 different algorithm with different constants.
 
-## Whether the corpus can now name the boundary
+## ~~Whether the corpus can now name the boundary~~
 
-**Narrowed, not closed, and the residue is named.**
+**Answered, by a different console, in the session after this one.**
 
 Two Nintendo DS cartridges, two unrelated developers, one publisher, one year
 apart, and neither carries the codec. That excludes the reading that Tempest's
@@ -67,12 +67,35 @@ zero was about *that team* in isolation, and it excludes the reading that the
 *platform* forbids compression — this cartridge compresses 16.9 MB into 32.1 MB
 in the platform's own format and fills 96.8% of the part.
 
-What survives untouched is the third reading the corpus named: **both
+What survived untouched was the third reading the corpus named: **both
 developers are outside the Namco Tales Studio line**, and a codec that travelled
-with a codebase would not be expected to reach either. Attacking that needs a
-Nintendo DS title *from* that line, and there is not one. Until there is, the
-corpus can say the boundary is not the machine and cannot say it is the
-codebase on DS evidence alone.
+with a codebase would not be expected to reach either. This document asked for a
+Nintendo title *from* that line and said there was not one.
+
+**There is one, and it is not on this machine.** *Tales of Symphonia: Ratatosk
+no Kishi* (Wii, 26 June 2008) is the direct sequel to the 2003 GameCube
+*Tales of Symphonia* — the corpus's only PowerPC positive, which carries the
+decoder four times and decodes 487 of 487 blocks. Same studio line, same
+processor family, a Nintendo console, five years later. It does not carry the
+codec: zero `4078` / `4079` / `4070` / `4071` over 637,871 PowerPC instruction
+words, zero fingerprint clusters where the 2003 build has four, and zero blocks
+across its 4.29 GB game partition under the same unmodified reference decoder
+that returns 1,089 on the 1995 cartridge.
+
+And because both builds are Metrowerks PowerPC `.dol` files, the strong byte
+test ran for the first time across a console generation: 872 bytes of the 2003
+decoder score **10 bytes** in the 2008 executable — the same as an unrelated
+Wii title — while the two executables share **835 contiguous identical bytes**
+of Nintendo SDK code that no control image has.
+
+So the alternative this document could not exclude is excluded. *"The codebase
+never shipped a Nintendo title"* is false: it shipped two, and the first one
+carries the codec. **The two zeros on this machine are facts about the two DS
+developers, not about the reach of the codebase** — and what remains open
+is not a platform question at all but a date: the codec's last confirmed
+appearance is *Tales of the Abyss*, 25 November 2005, and its first confirmed
+absence from the line is June 2008.
+[wii-talesofsymphoniadotnw-doc](https://github.com/vs-sr-dev/wii-talesofsymphoniadotnw-doc)
 
 ## The `EZBIND` tag at `+0x0C`
 
