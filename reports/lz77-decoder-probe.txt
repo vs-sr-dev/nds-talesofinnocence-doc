@@ -1,0 +1,278 @@
+############ arm9 ############
+_work/arm9.bin
+  676952 bytes, load address 0x02000000, window 40 instructions
+  169238 aligned words, 338476 halfwords
+
+  ARM
+      24710 data-processing words with an immediate operand
+        267  1. mov rD, rS, lsr #4      (the length nibble)
+         10  2. add rD, rS, #3          (the +3)
+         24  3. and rD, rS, #15         (the low nibble)
+         52  4. orr/add ..., lsl #8     (the twelve-bit join)
+  THUMB
+     338476 halfwords decoded
+        142  1. lsr rD, rS, #4
+        178  2. add #3, either form
+        111  3. mov #15, and 3 lsl #28 / lsr #28 pairs
+       8865  4. lsl rD, rS, #8
+
+  co-locations, within 40 instructions either way
+  ARM   length nibble with a +3: 0
+  ARM   low nibble with a twelve-bit join: 2
+      0x02068B94
+      0x02068BB8
+  THUMB length nibble with a +3: 8
+      0x02051D8C
+      0x02051D90
+      0x02051FDC
+      0x02051FE0
+      0x02051FE4
+      0x020838B0
+      0x020838C8
+      0x020850C0
+  THUMB low nibble with a twelve-bit join: 55
+      0x020144D0
+      0x02016F64
+      0x0201B0A4
+      0x0201D130
+      0x0201E656
+      0x0201FB64
+      0x020212DC
+      0x02021C40
+      0x020238B2
+      0x02023C9A
+      0x02023E20
+      0x02024938
+      0x0202A9DC
+      0x0202BA46
+      0x0202C4EA
+      0x0202D338
+      0x0202E264
+      0x0202E998
+      0x020318CA
+      0x02032540
+
+  the halfword-token variant, length from bits 15..12
+        367 ARM   mov rD, rS, lsr #12
+        292 THUMB lsr rD, rS, #12
+  ARM   lsr #12 with a +3: 0
+  THUMB lsr #12 with a +3: 8
+      0x020161E2
+      0x02043E1C
+      0x02043E74
+      0x02051906
+      0x0205191E
+      0x02051936
+      0x0205198A
+      0x020519A2
+
+  the do/while variant, where the +3 is carried as +2 or +1
+    length nibble within 40 of a +/-1:  ARM 7, THUMB 21
+    length nibble within 40 of a +/-2:  ARM 1, THUMB 9
+
+############ arm7 ############
+_work/arm7.bin
+  159160 bytes, load address 0x02380000, window 40 instructions
+  39790 aligned words, 79580 halfwords
+
+  ARM
+      11884 data-processing words with an immediate operand
+         14  1. mov rD, rS, lsr #4      (the length nibble)
+         15  2. add rD, rS, #3          (the +3)
+         13  3. and rD, rS, #15         (the low nibble)
+         37  4. orr/add ..., lsl #8     (the twelve-bit join)
+  THUMB
+      79580 halfwords decoded
+        115  1. lsr rD, rS, #4
+         20  2. add #3, either form
+          6  3. mov #15, and 0 lsl #28 / lsr #28 pairs
+        133  4. lsl rD, rS, #8
+
+  co-locations, within 40 instructions either way
+  ARM   length nibble with a +3: 0
+  ARM   low nibble with a twelve-bit join: 1
+      0x0238650C
+  THUMB length nibble with a +3: 8
+      0x023A5BEC
+      0x023A5D28
+      0x023A5D54
+      0x023A5D80
+      0x023A5E98
+      0x023A5EFC
+      0x023A5F6C
+      0x023A5FCC
+  THUMB low nibble with a twelve-bit join: 0
+
+  the halfword-token variant, length from bits 15..12
+          5 ARM   mov rD, rS, lsr #12
+        108 THUMB lsr rD, rS, #12
+  ARM   lsr #12 with a +3: 0
+  THUMB lsr #12 with a +3: 0
+
+  the do/while variant, where the +3 is carried as +2 or +1
+    length nibble within 40 of a +/-1:  ARM 8, THUMB 25
+    length nibble within 40 of a +/-2:  ARM 3, THUMB 9
+
+############ overlay_0 ############
+_work/overlay_0.bin
+  712800 bytes, load address 0x02120E60, window 40 instructions
+  178200 aligned words, 356400 halfwords
+
+  ARM
+      24502 data-processing words with an immediate operand
+        126  1. mov rD, rS, lsr #4      (the length nibble)
+          8  2. add rD, rS, #3          (the +3)
+         29  3. and rD, rS, #15         (the low nibble)
+          2  4. orr/add ..., lsl #8     (the twelve-bit join)
+  THUMB
+     356400 halfwords decoded
+         23  1. lsr rD, rS, #4
+         29  2. add #3, either form
+        331  3. mov #15, and 0 lsl #28 / lsr #28 pairs
+      15138  4. lsl rD, rS, #8
+
+  co-locations, within 40 instructions either way
+  ARM   length nibble with a +3: 0
+  ARM   low nibble with a twelve-bit join: 0
+  THUMB length nibble with a +3: 6
+      0x021AF844
+      0x021AF84A
+      0x021AFB5C
+      0x021AFB62
+      0x021AFC0A
+      0x021AFC10
+  THUMB low nibble with a twelve-bit join: 117
+      0x02122530
+      0x02123EF8
+      0x02124678
+      0x02124760
+      0x02125140
+      0x02125588
+      0x021256B8
+      0x021258E8
+      0x02125A4C
+      0x0212925C
+      0x0212960C
+      0x02129B08
+      0x02129B5A
+      0x0212BE80
+      0x0212D16C
+      0x0212E2F8
+      0x0212F138
+      0x0213122A
+      0x02135244
+      0x02135786
+
+  the halfword-token variant, length from bits 15..12
+         25 ARM   mov rD, rS, lsr #12
+        391 THUMB lsr rD, rS, #12
+  ARM   lsr #12 with a +3: 0
+  THUMB lsr #12 with a +3: 4
+      0x021AF830
+      0x021AF860
+      0x021AFB84
+      0x021AFC26
+
+  the do/while variant, where the +3 is carried as +2 or +1
+    length nibble within 40 of a +/-1:  ARM 1, THUMB 10
+    length nibble within 40 of a +/-2:  ARM 0, THUMB 6
+
+############ overlay_1 ############
+_work/overlay_1.bin
+  577312 bytes, load address 0x02120E60, window 40 instructions
+  144328 aligned words, 288656 halfwords
+
+  ARM
+      20254 data-processing words with an immediate operand
+        260  1. mov rD, rS, lsr #4      (the length nibble)
+          9  2. add rD, rS, #3          (the +3)
+         17  3. and rD, rS, #15         (the low nibble)
+         42  4. orr/add ..., lsl #8     (the twelve-bit join)
+  THUMB
+     288656 halfwords decoded
+        245  1. lsr rD, rS, #4
+         84  2. add #3, either form
+         97  3. mov #15, and 1 lsl #28 / lsr #28 pairs
+       9182  4. lsl rD, rS, #8
+
+  co-locations, within 40 instructions either way
+  ARM   length nibble with a +3: 0
+  ARM   low nibble with a twelve-bit join: 0
+  THUMB length nibble with a +3: 2
+      0x02127CF4
+      0x02127D84
+  THUMB low nibble with a twelve-bit join: 49
+      0x0212605A
+      0x021263DA
+      0x02131680
+      0x02131690
+      0x0213F0BC
+      0x02142C7C
+      0x02142C8C
+      0x02142CD2
+      0x02142CE2
+      0x02142F8A
+      0x021430AA
+      0x021430C4
+      0x02143190
+      0x021431A0
+      0x02143F8E
+      0x02145378
+      0x021460DA
+      0x02146CC6
+      0x0214C992
+      0x0214CE0E
+
+  the halfword-token variant, length from bits 15..12
+        206 ARM   mov rD, rS, lsr #12
+        230 THUMB lsr rD, rS, #12
+  ARM   lsr #12 with a +3: 1
+      0x02156FE8
+  THUMB lsr #12 with a +3: 0
+
+  the do/while variant, where the +3 is carried as +2 or +1
+    length nibble within 40 of a +/-1:  ARM 1, THUMB 0
+    length nibble within 40 of a +/-2:  ARM 0, THUMB 1
+
+############ overlay_2 ############
+_work/overlay_2.bin
+  89856 bytes, load address 0x02120E60, window 40 instructions
+  22464 aligned words, 44928 halfwords
+
+  ARM
+       3455 data-processing words with an immediate operand
+          7  1. mov rD, rS, lsr #4      (the length nibble)
+          1  2. add rD, rS, #3          (the +3)
+          4  3. and rD, rS, #15         (the low nibble)
+        214  4. orr/add ..., lsl #8     (the twelve-bit join)
+  THUMB
+      44928 halfwords decoded
+         20  1. lsr rD, rS, #4
+         40  2. add #3, either form
+          5  3. mov #15, and 0 lsl #28 / lsr #28 pairs
+       1424  4. lsl rD, rS, #8
+
+  co-locations, within 40 instructions either way
+  ARM   length nibble with a +3: 0
+  ARM   low nibble with a twelve-bit join: 2
+      0x021334C0
+      0x0213350C
+  THUMB length nibble with a +3: 1
+      0x021313E2
+  THUMB low nibble with a twelve-bit join: 4
+      0x02124D7C
+      0x021263CE
+      0x021264D8
+      0x02126830
+
+  the halfword-token variant, length from bits 15..12
+         16 ARM   mov rD, rS, lsr #12
+         25 THUMB lsr rD, rS, #12
+  ARM   lsr #12 with a +3: 0
+  THUMB lsr #12 with a +3: 1
+      0x021313DC
+
+  the do/while variant, where the +3 is carried as +2 or +1
+    length nibble within 40 of a +/-1:  ARM 1, THUMB 0
+    length nibble within 40 of a +/-2:  ARM 2, THUMB 0
+

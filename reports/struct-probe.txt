@@ -1,0 +1,224 @@
+############ arm9 ############
+_work/arm9.bin
+  676952 bytes, 169238 aligned words, load address 0x02000000
+  22568 ARM data-processing immediates, 3777 ARM mov-shifts, 92308 THUMB shifts
+
+  1. the control-register refill, `flags = byte | 0xFF00`
+     5 immediates equal to 0xFF00, of which 0 are `orr`
+
+  2. the ring mask, `& 0x0FFF`
+     4095 is not encodable as an ARM immediate, so it has three
+     possible forms; all three are counted.
+     0 `and`-with-4095 immediates (expected 0 -- not encodable)
+     8 literal-pool words equal to 4095
+     0 ARM `lsl #20` immediately followed by `lsr #20`
+     3 THUMB `lsl #20` immediately followed by `lsr #20`
+     (and 3 THUMB `lsl #28`/`lsr #28` pairs, the four-bit mask)
+       0x0204807C
+       0x020480F4
+       0x02074E7A
+
+  3. a 4,096-byte ring
+     90 immediates equal to 4096, out of 22568
+     0 `add`/`sub` on sp with a 4096..4400 immediate (a ring on the stack)
+
+  4. the nibble split, `>> 4` next to `& 0x0F`
+     24 `and #15`, 5 ARM `lsr #4`, 142 THUMB `lsr #4`
+     0 `and #15` within eight instructions of an ARM `lsr #4`
+
+  5. the run escape, `+3` and `+19`
+     41292 THUMB mov/cmp/add/sub #imm8 instructions as well
+     71 `add #3`, 9 `add #19`, both instruction sets
+     6 pairs within 200 instructions of each other
+       add #19 at 0x0200CD14, add #3 at 0x0200CFF8
+       add #19 at 0x0200CD64, add #3 at 0x0200CFF8
+       add #19 at 0x0200EF34, add #3 at 0x0200EF28
+       add #19 at 0x0200EF34, add #3 at 0x0200F140
+       add #19 at 0x0200EF34, add #3 at 0x0200F1CC
+       add #19 at 0x0200EF34, add #3 at 0x0200F234
+
+  6. all five together
+     A routine implementing this format has the mask, the refill,
+     the nibble split and both run constants inside a few hundred
+     instructions of each other.  Sites where at least three of the
+     five land within 200 instructions:
+       none.
+
+############ arm7 ############
+_work/arm7.bin
+  159160 bytes, 39790 aligned words, load address 0x02380000
+  11882 ARM data-processing immediates, 3324 ARM mov-shifts, 28647 THUMB shifts
+
+  1. the control-register refill, `flags = byte | 0xFF00`
+     28 immediates equal to 0xFF00, of which 0 are `orr`
+
+  2. the ring mask, `& 0x0FFF`
+     4095 is not encodable as an ARM immediate, so it has three
+     possible forms; all three are counted.
+     0 `and`-with-4095 immediates (expected 0 -- not encodable)
+     4 literal-pool words equal to 4095
+     0 ARM `lsl #20` immediately followed by `lsr #20`
+     0 THUMB `lsl #20` immediately followed by `lsr #20`
+     (and 0 THUMB `lsl #28`/`lsr #28` pairs, the four-bit mask)
+
+  3. a 4,096-byte ring
+     31 immediates equal to 4096, out of 11882
+     0 `add`/`sub` on sp with a 4096..4400 immediate (a ring on the stack)
+
+  4. the nibble split, `>> 4` next to `& 0x0F`
+     13 `and #15`, 4 ARM `lsr #4`, 115 THUMB `lsr #4`
+     0 `and #15` within eight instructions of an ARM `lsr #4`
+
+  5. the run escape, `+3` and `+19`
+     5168 THUMB mov/cmp/add/sub #imm8 instructions as well
+     33 `add #3`, 0 `add #19`, both instruction sets
+     0 pairs within 200 instructions of each other
+
+  6. all five together
+     A routine implementing this format has the mask, the refill,
+     the nibble split and both run constants inside a few hundred
+     instructions of each other.  Sites where at least three of the
+     five land within 200 instructions:
+       none.
+
+############ overlay_0 ############
+_work/overlay_0.bin
+  712800 bytes, 178200 aligned words, load address 0x02120E60
+  22350 ARM data-processing immediates, 115 ARM mov-shifts, 69184 THUMB shifts
+
+  1. the control-register refill, `flags = byte | 0xFF00`
+     0 immediates equal to 0xFF00, of which 0 are `orr`
+
+  2. the ring mask, `& 0x0FFF`
+     4095 is not encodable as an ARM immediate, so it has three
+     possible forms; all three are counted.
+     0 `and`-with-4095 immediates (expected 0 -- not encodable)
+     15 literal-pool words equal to 4095
+     0 ARM `lsl #20` immediately followed by `lsr #20`
+     1 THUMB `lsl #20` immediately followed by `lsr #20`
+     (and 0 THUMB `lsl #28`/`lsr #28` pairs, the four-bit mask)
+       0x021AFAA4
+
+  3. a 4,096-byte ring
+     43 immediates equal to 4096, out of 22350
+     0 `add`/`sub` on sp with a 4096..4400 immediate (a ring on the stack)
+
+  4. the nibble split, `>> 4` next to `& 0x0F`
+     29 `and #15`, 0 ARM `lsr #4`, 23 THUMB `lsr #4`
+     0 `and #15` within eight instructions of an ARM `lsr #4`
+
+  5. the run escape, `+3` and `+19`
+     54128 THUMB mov/cmp/add/sub #imm8 instructions as well
+     11 `add #3`, 1 `add #19`, both instruction sets
+     0 pairs within 200 instructions of each other
+
+  6. all five together
+     A routine implementing this format has the mask, the refill,
+     the nibble split and both run constants inside a few hundred
+     instructions of each other.  Sites where at least three of the
+     five land within 200 instructions:
+       none.
+
+############ overlay_1 ############
+_work/overlay_1.bin
+  577312 bytes, 144328 aligned words, load address 0x02120E60
+  18419 ARM data-processing immediates, 2762 ARM mov-shifts, 91916 THUMB shifts
+
+  1. the control-register refill, `flags = byte | 0xFF00`
+     38 immediates equal to 0xFF00, of which 0 are `orr`
+
+  2. the ring mask, `& 0x0FFF`
+     4095 is not encodable as an ARM immediate, so it has three
+     possible forms; all three are counted.
+     0 `and`-with-4095 immediates (expected 0 -- not encodable)
+     9 literal-pool words equal to 4095
+     0 ARM `lsl #20` immediately followed by `lsr #20`
+     0 THUMB `lsl #20` immediately followed by `lsr #20`
+     (and 1 THUMB `lsl #28`/`lsr #28` pairs, the four-bit mask)
+
+  3. a 4,096-byte ring
+     33 immediates equal to 4096, out of 18419
+     0 `add`/`sub` on sp with a 4096..4400 immediate (a ring on the stack)
+
+  4. the nibble split, `>> 4` next to `& 0x0F`
+     17 `and #15`, 0 ARM `lsr #4`, 245 THUMB `lsr #4`
+     0 `and #15` within eight instructions of an ARM `lsr #4`
+
+  5. the run escape, `+3` and `+19`
+     29555 THUMB mov/cmp/add/sub #imm8 instructions as well
+     42 `add #3`, 1 `add #19`, both instruction sets
+     0 pairs within 200 instructions of each other
+
+  6. all five together
+     A routine implementing this format has the mask, the refill,
+     the nibble split and both run constants inside a few hundred
+     instructions of each other.  Sites where at least three of the
+     five land within 200 instructions:
+       none.
+
+############ overlay_2 ############
+_work/overlay_2.bin
+  89856 bytes, 22464 aligned words, load address 0x02120E60
+  3270 ARM data-processing immediates, 977 ARM mov-shifts, 12104 THUMB shifts
+
+  1. the control-register refill, `flags = byte | 0xFF00`
+     0 immediates equal to 0xFF00, of which 0 are `orr`
+
+  2. the ring mask, `& 0x0FFF`
+     4095 is not encodable as an ARM immediate, so it has three
+     possible forms; all three are counted.
+     0 `and`-with-4095 immediates (expected 0 -- not encodable)
+     0 literal-pool words equal to 4095
+     0 ARM `lsl #20` immediately followed by `lsr #20`
+     0 THUMB `lsl #20` immediately followed by `lsr #20`
+     (and 0 THUMB `lsl #28`/`lsr #28` pairs, the four-bit mask)
+
+  3. a 4,096-byte ring
+     5 immediates equal to 4096, out of 3270
+     0 `add`/`sub` on sp with a 4096..4400 immediate (a ring on the stack)
+
+  4. the nibble split, `>> 4` next to `& 0x0F`
+     4 `and #15`, 4 ARM `lsr #4`, 20 THUMB `lsr #4`
+     3 `and #15` within eight instructions of an ARM `lsr #4`
+
+  5. the run escape, `+3` and `+19`
+     3904 THUMB mov/cmp/add/sub #imm8 instructions as well
+     28 `add #3`, 22 `add #19`, both instruction sets
+     39 pairs within 200 instructions of each other
+       add #19 at 0x02130AA8, add #3 at 0x02130CE4
+       add #19 at 0x02130BB8, add #3 at 0x02130CE4
+       add #19 at 0x02130BB8, add #3 at 0x02130DFC
+       add #19 at 0x02130BB8, add #3 at 0x02130E0C
+       add #19 at 0x02130BB8, add #3 at 0x02130E28
+       add #19 at 0x02130BB8, add #3 at 0x02130E50
+       add #19 at 0x02130CB0, add #3 at 0x02130CE4
+       add #19 at 0x02130CB0, add #3 at 0x02130DFC
+       add #19 at 0x02130CB0, add #3 at 0x02130E0C
+       add #19 at 0x02130CB0, add #3 at 0x02130E28
+       add #19 at 0x02130CB0, add #3 at 0x02130E50
+       add #19 at 0x02131150, add #3 at 0x02130E50
+       add #19 at 0x02131150, add #3 at 0x02131250
+       add #19 at 0x02131150, add #3 at 0x021313F0
+       add #19 at 0x02131150, add #3 at 0x02131414
+       add #19 at 0x0213128C, add #3 at 0x02131250
+       add #19 at 0x0213128C, add #3 at 0x021313F0
+       add #19 at 0x0213128C, add #3 at 0x02131414
+       add #19 at 0x021312F8, add #3 at 0x02131250
+       add #19 at 0x021312F8, add #3 at 0x021313F0
+
+  6. all five together
+     A routine implementing this format has the mask, the refill,
+     the nibble split and both run constants inside a few hundred
+     instructions of each other.  Sites where at least three of the
+     five land within 200 instructions:
+       0x0213345C  +19, +3, nibble
+       0x0213349C  +19, +3, nibble
+       0x021334C0  +19, +3, nibble
+       0x021334D4  +19, +3, nibble
+       0x021334F0  +19, +3, nibble
+       0x0213350C  +19, +3, nibble
+       0x02133530  +19, +3, nibble
+       0x0213355C  +19, +3, nibble
+       0x0213356C  +19, +3, nibble
+       0x0213359C  +19, +3, nibble
+

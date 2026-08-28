@@ -1,0 +1,7 @@
+# 6378 files walked
+# 1344 EZBIND archives, 60792584 bytes
+#   of which 101 had to be decompressed first
+#   of which 0 are members of another archive
+# 9646 members, 60416314 bytes
+# 1 archives failed the structural check
+#   battle/btleff.bin: the +0x0C tag repeats within this archive

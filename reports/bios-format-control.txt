@@ -1,0 +1,10 @@
+# Tales of Innocence ships one animation five times over, once per BIOS
+# format, alongside the original -- /motion/alb000/.  Every decoder in
+# ndscomp.py is checked against it here.  This is the corpus's first
+# positive control for these five formats, and it found two defects.
+
+00_HUFF.bin                 3296  0x28 Huffman8  ->    3376  consumed 3296/3296  identical to 00.nsbca: YES
+01_LZ.bin                   6174  0x10 LZ77      ->    6736  consumed 6174/6174  identical to 01.nsbca: YES
+01_RL.bin                   6657  0x30 RLE       ->    6736  consumed 6657/6657  identical to 01.nsbca: YES
+01_HUFF.bin                 6108  0x24 Huffman4  ->    6736  consumed 6108/6108  identical to 01.nsbca: YES
+01_DIFF.bin                 6740  0x82 Diff16    ->    6736  consumed 6740/6740  identical to 01.nsbca: YES

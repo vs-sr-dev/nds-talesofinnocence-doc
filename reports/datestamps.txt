@@ -1,0 +1,26 @@
+== C __DATE__ __TIME__: 0 hits, 0 distinct ==
+
+== ISO date: 273 hits, 3 distinct ==
+  2006/12/05                                                 x267   0x00DE5E86  /battle/list+0x86
+  2251/12/01                                                 x4     0x01A86DB1  /facedata/face11_3.fdt+0x5B1
+  2007/10/07                                                 x2     0x000A8479  arm9.bin+0xA4479
+
+== build string: 9 hits, 9 distinct ==
+  ADXT/NITRO Ver.10.36 Build:Sep 28 2007 13:14:01            x1     0x001AAA75  FAT file 2+0x53075
+  NITROCI/NITRO Ver.1.02 Build:Sep 28 2007 13:14:04          x1     0x001AAAE1  FAT file 2+0x530E1
+  NITRORNA/NITRO Ver.0.98 Build:Sep 28 2007 13:14:07         x1     0x001AAB25  FAT file 2+0x53125
+  CRI CRW:STD/NITRO Ver.0.82 Build:Sep 28 2007 13:14:11      x1     0x001AAC41  FAT file 2+0x53241
+  ADXNITROSDK Ver.                                           x1     0x001C7101  FAT file 2+0x6F701
+  ADXNITRO Ver.1.00 Build:Sep 28 2007 13:14:05               x1     0x001C7125  FAT file 2+0x6F725
+  MFCI/NITRO Ver.1.21 Build:Sep 28 2007 13:14:08             x1     0x001C74B9  FAT file 2+0x6FAB9
+  AHX/NITRO Ver.1.59 Build:Sep 28 2007 13:14:10              x1     0x001C8AF1  FAT file 2+0x710F1
+  ADXCS/NITRO Ver.1.23 Build:Sep 28 2007 13:14:10            x1     0x001CCD4D  FAT file 2+0x7534D
+
+== eight-digit date groups in names ==
+  none
+
+== six-digit yymmdd groups in names, 2004-2009 ==
+  050131  x1     0x0176E387  /cutin/cutin_003.bin+0xD387
+  060212  x1     0x020468F9  /field/f040.bin+0x1C2F9
+  061010  x1     0x017CA88C  /cutin/cutin_006.bin+0x1368C
+  3 distinct groups

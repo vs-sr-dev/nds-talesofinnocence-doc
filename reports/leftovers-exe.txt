@@ -1,0 +1,644 @@
+========================================================================
+arm9.bin -- 676952 bytes, 1932 printable runs of 6 or more
+========================================================================
+
+-- build stamps (__DATE__ / __TIME__ shape) --
+  none
+
+-- SDK, middleware and company names --
+  0x00000BC3  ![SDK+NINTENDO:BACKUP]
+  0x00000BDC  [SDK+Actimagine:MO]
+
+-- absolute paths and source file names --
+  0x000807E0  ToI.s
+  0x0008DCCC  04d.s
+  0x0008DD00  /lc08.NFTR
+  0x0008DD10  /lh08.NFTR
+  0x0008DD20  /lc10.NFTR
+  0x0008DD30  /lh10.NFTR
+  0x0008DD40  /lc12.NFTR
+  0x0008DE14  /wpnicon.arc
+  0x0008DE28  /amricon.arc
+  0x0008DE3C  /acsicon.arc
+  0x0008F0BC  /objdata.arc
+  0x0008FDB8  /rcpicon.arc
+  0x0008FE2C  /itemicon.arc
+  0x00093544  /bgdata.arc
+  0x000A1D78  /effmodel.bin
+  0x000A1D8C  /btleff.bin
+  0x000A1DA0  /bt_common.bin
+  0x000A1DC4  s_mdl.bin
+  0x000A1DE4  s_tex.bin
+  0x000A1E14  s_mot.bin
+  0x000A234C  /symbol_
+  0x000A2894  /subdata.arc
+  0x000A2900  /navimap.nbfp
+  0x000A2B88  /chddata.arc
+
+-- file names the code carries --
+  0x000A2974  wireless_error.plt
+
+-- diagnostics, format strings and debug text --
+  0x00070759  e%f(M-j
+  0x0007EFBC  %m/%d/%y
+  0x0007EFD4  %I:%M:%S %p
+  0x0007F8B0  17cDSDebugTextPlain
+  0x0008DCCC  facechat/ev%04d.scr
+  0x0008DCE0  facechat/sb%02d-%04d.scr
+  0x0008F1EC  WH_SYSSTATE_ERROR
+  0x0008F28C  WM_ERRCODE_DCF_TEST
+  0x0008F330  WM_ERRCODE_FIFO_ERROR
+  0x0008F3F0  WM_ERRCODE_FLASH_ERROR
+  0x0008F4B0  WM_STATECODE_FIFO_ERROR
+  0x0008F858  %s -> 
+  0x0008F868  StartParent - new child (aid 0x%x) connected
+  0x0008F898  StartParent - child (aid 0x%x) disconnected
+  0x0008F8C8  StartParent - child (aid 0x%x) disconnected from myself
+  0x0008F904  unknown indicate, state = %d
+  0x0008F9A8  WH_StateOutStartScan : MAC=%02x%02x%02x%02x%02x%02x 
+  0x0008FB08  unknown state %d, %s
+  0x0008FB9C  WH_StateInSetMPData failed - %s
+  0x0008FBC0  channel %d bratio = 0x%x
+  0x0008FBDC  decided channel = %d
+  0x0008FBF4  recv buffer size = %d
+  0x0008FC0C  send buffer size = %d
+  0x0008FC24  unknown connect mode %d
+  0x0008FCBC  WH_Finalize, state = %d
+  0x00091498  n%4d/%4d
+  0x00092C48  %4d/%4d
+  0x00092D48  chara%02d.nbfc
+  0x00092D58  chara%02d.nbfp
+  0x000A1DB8  btmap_%03d
+  0x000A1DC4  battle/%s_mdl.bin
+  0x000A1DE4  battle/%s_tex.bin
+  0x000A1E14  battle/%s_mot.bin
+  0x000A1E7C  Item%03d.nbfc
+  0x000A1E8C  Item%03d.nbfp
+  0x000A1E9C  Weapon%03d.nbfc
+  0x000A1EAC  Weapon%03d.nbfp
+  0x000A1EBC  Armor%03d.nbfc
+  0x000A1ECC  Armor%03d.nbfp
+  0x000A1EDC  Accessory%02d.nbfc
+  0x000A1EF0  Accessory%02d.nbfp
+  0x000A1F04  Recipe%03d.nbfc
+  0x000A1F14  Recipe%03d.nbfp
+  0x000A2308  %s_sotai.nsbmd
+  0x000A232C  %s_sotai.nsbtx
+  0x000A233C  %s_sotai.nsbta
+  0x000A234C  chara/symbol_%s_mot.bin
+  0x000A2960  wireless_error.pix
+  0x000A2974  wireless_error.plt
+  0x000A2BBC  child_chara%02d.nbfc
+  0x000A2BD4  child_chara%02d.nbfp
+
+========================================================================
+arm7.bin -- 159160 bytes, 4 printable runs of 6 or more
+========================================================================
+
+-- build stamps (__DATE__ / __TIME__ shape) --
+  none
+
+-- SDK, middleware and company names --
+
+-- absolute paths and source file names --
+
+-- file names the code carries --
+
+-- diagnostics, format strings and debug text --
+
+========================================================================
+overlay_0.bin -- 712800 bytes, 3624 printable runs of 6 or more
+========================================================================
+
+-- build stamps (__DATE__ / __TIME__ shape) --
+  none
+
+-- SDK, middleware and company names --
+
+-- absolute paths and source file names --
+  0x0008873C  hyu000_mdl.bin
+  0x0008874C  hyu000_mot.bin
+  0x0008875C  hyu000_tex.bin
+  0x00088C94  hst000_mdl.bin
+  0x00088CA4  hst000_mot.bin
+  0x00088CB4  hst000_tex.bin
+  0x00088FFC  s_mdl.bin
+  0x00089008  hum034_mot.bin
+  0x00089018  s_tex.bin
+  0x000892D4  toi071_mot.bin
+  0x00089B58  asu000_mdl.bin
+  0x00089B68  asu000_mot.bin
+  0x00089B78  asu000_tex.bin
+  0x0008A928  ric000_win_mot.bin
+  0x0008A9AC  ric000_mdl.bin
+  0x0008A9BC  ric000_mot.bin
+  0x0008A9CC  ric000_tex.bin
+  0x0008AB64  /bt_result.bin
+  0x0008BC38  her000_win_mot.bin
+  0x0008BCBC  her000_mdl.bin
+  0x0008BCCC  her000_mot.bin
+  0x0008BCDC  her000_tex.bin
+  0x0008C6C0  toi000_mot.bin
+  0x0008C97C  toi010_mot.bin
+  0x0008CD14  toi020_mot.bin
+  0x0008D104  toi030_mot.bin
+  0x0008D380  toi090_mot.bin
+  0x0008D600  toi100_mot.bin
+  0x00093964  spa000_win_mot.bin
+  0x000939E8  spa000_mdl.bin
+  0x000939F8  spa000_mot.bin
+  0x00093A08  spa000_tex.bin
+  0x00095328  fly010_mot.bin
+  0x000956A4  hum001_mot.bin
+  0x00095A28  hum011_mot.bin
+  0x00095D60  hum021_mot.bin
+  0x00096190  hum040_mot.bin
+  0x00096504  pla000_mot.bin
+  0x00096864  pla010_mot.bin
+  0x00096CA8  pla020_mot.bin
+  0x000970D0  pla030_mot.bin
+  0x00097544  spi020_mot.bin
+  0x000979A8  amp030_mot.bin
+  0x00097CE4  bst000_mot.bin
+  0x0009800C  bst005_mot.bin
+  0x0009836C  amp010_mot.bin
+  0x00098718  amp020_mot.bin
+  0x00098AA8  bst060_mot.bin
+  0x00098D90  enm010_mot.bin
+  0x000990DC  bst010_mot.bin
+  0x00099408  bst020_mot.bin
+  0x000997D0  bst042_mot.bin
+  0x00099AFC  bst050_mot.bin
+  0x00099EA0  enm040_mot.bin
+  0x0009A260  enm050_mot.bin
+  0x0009A5E8  enm070_mot.bin
+  0x0009A970  enm080_mot.bin
+  0x0009AC9C  enm090_mot.bin
+  0x0009AFC0  fly000_mot.bin
+  0x0009B42C  fly020_mot.bin
+  0x0009B754  fly030_mot.bin
+  0x0009BB28  fly044_mot.bin
+  0x0009DB4C  amp000_mot.bin
+  0x000A2900  ruc000_win_mot.bin
+  0x000A2980  ruc000_mdl.bin
+  0x000A2990  ruc000_mot.bin
+  0x000A29A0  ruc000_tex.bin
+  0x000A29F0  ruc001_mdl.bin
+  0x000A2A10  ruc001_tex.bin
+  0x000A3434  sa.bin
+  0x000A3484  sb.bin
+  0x000A3610  sc.bin
+  0x000A3638  sd.bin
+  0x000A3958  /bt_common.bin
+  0x000A6774  /btleff.bin
+  0x000A67BC  /effmodel.bin
+  0x000A7EDC  iri000_win_mot.bin
+  0x000A7F5C  iri000_mdl.bin
+  0x000A7F6C  iri000_mot.bin
+  0x000A7F7C  iri000_tex.bin
+  0x000A8BB0  toi041_mot.bin
+  0x000A8F04  toi061_mot.bin
+  0x000A91A0  toi080_mot.bin
+  0x000A94A0  /wpnicon.arc
+  0x000A94B4  /amricon.arc
+  0x000A94C8  /acsicon.arc
+  0x000A994C  toi050_mot.bin
+  0x000A9F24  ang000_win_mot.bin
+  0x000A9FA4  ang000_mdl.bin
+  0x000A9FB4  ang000_mot.bin
+  0x000A9FC4  ang000_tex.bin
+  0x000AAE68  gar000_mdl.bin
+  0x000AAE78  gar000_mot.bin
+  0x000AAE88  gar000_tex.bin
+  0x000AB150  /ruca_sp.bin
+  0x000AB80C  /sia000_sp.bin
+  0x000ABCC4  sia000_mdl.bin
+  0x000ABCD4  sia000_mot.bin
+  0x000ABCE4  sia000_tex.bin
+  0x000ABDD0  /spada_sp.bin
+  0x000ABE5C  /hermana_sp.bin
+  0x000AC2D4  tit000_mdl.bin
+  0x000AC2E4  tit000_mot.bin
+  0x000AC2F4  tit000_tex.bin
+  0x000AC608  /tit000_sp.bin
+  0x000ACD98  alb000_mdl.bin
+  0x000ACDA8  alb000_mot.bin
+  0x000ACDB8  alb000_tex.bin
+  0x000ACF00  /alb000_sp.bin
+  0x000AD1B8  cer000_mdl.bin
+  0x000AD1C8  cer000_mot.bin
+  0x000AD1D8  cer000_tex.bin
+  0x000AD2B8  /iria_sp.bin
+  0x000AD350  /ange_sp.bin
+  0x000AD4DC  /ricardo_sp.bin
+  0x000ADBC4  mat002_mot.bin
+
+-- file names the code carries --
+  0x0008873C  hyu000_mdl.bin
+  0x0008874C  hyu000_mot.bin
+  0x0008875C  hyu000_tex.bin
+  0x0008876C  hyu000_sotai.nsbmd
+  0x00088780  hyu000_sotai.nsbtx
+  0x00088C94  hst000_mdl.bin
+  0x00088CA4  hst000_mot.bin
+  0x00088CB4  hst000_tex.bin
+  0x00088CC4  hst000_sotai.nsbmd
+  0x00088CD8  hst000_sotai.nsbtx
+  0x00088CEC  gae000_sotai.nsbmd
+  0x00088D00  gae000_sotai.nsbtx
+  0x00089008  hum034_mot.bin
+  0x000892D4  toi071_mot.bin
+  0x00089B58  asu000_mdl.bin
+  0x00089B68  asu000_mot.bin
+  0x00089B78  asu000_tex.bin
+  0x00089B88  asu000_sotai.nsbmd
+  0x00089B9C  asu000_sotai.nsbtx
+  0x0008A928  ric000_win_mot.bin
+  0x0008A9AC  ric000_mdl.bin
+  0x0008A9BC  ric000_mot.bin
+  0x0008A9CC  ric000_tex.bin
+  0x0008A9DC  ric000_sotai.nsbmd
+  0x0008A9F0  ric000_sotai.nsbtx
+  0x0008ABAC  result.plt
+  0x0008BC38  her000_win_mot.bin
+  0x0008BCBC  her000_mdl.bin
+  0x0008BCCC  her000_mot.bin
+  0x0008BCDC  her000_tex.bin
+  0x0008BCEC  her000_sotai.nsbmd
+  0x0008BD00  her000_sotai.nsbtx
+  0x0008C6C0  toi000_mot.bin
+  0x0008C97C  toi010_mot.bin
+  0x0008CD14  toi020_mot.bin
+  0x0008D104  toi030_mot.bin
+  0x0008D380  toi090_mot.bin
+  0x0008D600  toi100_mot.bin
+  0x00093964  spa000_win_mot.bin
+  0x000939E8  spa000_mdl.bin
+  0x000939F8  spa000_mot.bin
+  0x00093A08  spa000_tex.bin
+  0x00093A18  spa000_sotai.nsbmd
+  0x00093A2C  spa000_sotai.nsbtx
+  0x00095328  fly010_mot.bin
+  0x000956A4  hum001_mot.bin
+  0x00095A28  hum011_mot.bin
+  0x00095D60  hum021_mot.bin
+  0x00096190  hum040_mot.bin
+  0x00096504  pla000_mot.bin
+  0x00096864  pla010_mot.bin
+  0x00096CA8  pla020_mot.bin
+  0x000970D0  pla030_mot.bin
+  0x00097544  spi020_mot.bin
+  0x000979A8  amp030_mot.bin
+  0x00097CE4  bst000_mot.bin
+  0x0009800C  bst005_mot.bin
+  0x0009836C  amp010_mot.bin
+  0x00098718  amp020_mot.bin
+  0x00098AA8  bst060_mot.bin
+  0x00098D90  enm010_mot.bin
+  0x000990DC  bst010_mot.bin
+  0x00099408  bst020_mot.bin
+  0x000997D0  bst042_mot.bin
+  0x00099AFC  bst050_mot.bin
+  0x00099EA0  enm040_mot.bin
+  0x0009A260  enm050_mot.bin
+  0x0009A5E8  enm070_mot.bin
+  0x0009A970  enm080_mot.bin
+  0x0009AC9C  enm090_mot.bin
+  0x0009AFC0  fly000_mot.bin
+  0x0009B42C  fly020_mot.bin
+  0x0009B754  fly030_mot.bin
+  0x0009BB28  fly044_mot.bin
+  0x0009DB4C  amp000_mot.bin
+  0x000A2900  ruc000_win_mot.bin
+  0x000A2980  ruc000_mdl.bin
+  0x000A2990  ruc000_mot.bin
+  0x000A29A0  ruc000_tex.bin
+  0x000A29B0  ruc000_sotai.nsbmd
+  0x000A29C4  ruc000_sotai.nsbtx
+  0x000A29F0  ruc001_mdl.bin
+  0x000A2A10  ruc001_tex.bin
+  0x000A2A20  ruc001_sotai.nsbmd
+  0x000A2A34  ruc001_sotai.nsbtx
+  0x000A7EDC  iri000_win_mot.bin
+  0x000A7F5C  iri000_mdl.bin
+  0x000A7F6C  iri000_mot.bin
+  0x000A7F7C  iri000_tex.bin
+  0x000A7F8C  iri000_sotai.nsbmd
+  0x000A7FA0  iri000_sotai.nsbtx
+  0x000A8BB0  toi041_mot.bin
+  0x000A8F04  toi061_mot.bin
+  0x000A91A0  toi080_mot.bin
+  0x000A994C  toi050_mot.bin
+  0x000A9F24  ang000_win_mot.bin
+  0x000A9FA4  ang000_mdl.bin
+  0x000A9FB4  ang000_mot.bin
+  0x000A9FC4  ang000_tex.bin
+  0x000A9FD4  ang000_sotai.nsbmd
+  0x000A9FE8  ang000_sotai.nsbtx
+  0x000AAE68  gar000_mdl.bin
+  0x000AAE78  gar000_mot.bin
+  0x000AAE88  gar000_tex.bin
+  0x000AAE98  gar000_sotai.nsbmd
+  0x000AAEAC  gar000_sotai.nsbtx
+  0x000AB0F0  asuhio_00.nsbca
+  0x000AB100  asuhio_01.nsbca
+  0x000AB110  asuhio_02.nsbca
+  0x000AB120  asuhio_03.nsbca
+  0x000AB130  asuhio_04.nsbca
+  0x000AB140  asuhio_05.nsbca
+  0x000AB41C  face.plt
+  0x000AB7D4  cbs000_sotai.nsbmd
+  0x000AB7E8  cbs000_00.nsbca
+  0x000ABCC4  sia000_mdl.bin
+  0x000ABCD4  sia000_mot.bin
+  0x000ABCE4  sia000_tex.bin
+  0x000ABCF4  sia000_sotai.nsbmd
+  0x000ABD08  sia000_sotai.nsbtx
+  0x000ABDBC  dur000_sotai.nsbmd
+  0x000ABE28  vri000_sotai.nsbmd
+  0x000ABE3C  vri000_00.nsbca
+  0x000ABE4C  vri000_01.nsbca
+  0x000AC2D4  tit000_mdl.bin
+  0x000AC2E4  tit000_mot.bin
+  0x000AC2F4  tit000_tex.bin
+  0x000AC304  tit000_sotai.nsbmd
+  0x000AC318  tit000_sotai.nsbtx
+  0x000AC5D0  sak000_sotai.nsbmd
+  0x000AC5E4  sak000_00.nsbca
+  0x000ACD98  alb000_mdl.bin
+  0x000ACDA8  alb000_mot.bin
+  0x000ACDB8  alb000_tex.bin
+  0x000ACDC8  alb000_sotai.nsbmd
+  0x000ACDDC  alb000_sotai.nsbtx
+  0x000ACE9C  him000_sotai.nsbmd
+  0x000ACEB0  him000_00.nsbca
+  0x000ACEC0  him000_01.nsbca
+  0x000ACED0  him000_02.nsbca
+  0x000ACEE0  him000_03.nsbca
+  0x000AD1B8  cer000_mdl.bin
+  0x000AD1C8  cer000_mot.bin
+  0x000AD1D8  cer000_tex.bin
+  0x000AD1E8  cer000_sotai.nsbmd
+  0x000AD1FC  cer000_sotai.nsbtx
+  0x000AD268  ina000_sotai.nsbmd
+  0x000AD27C  ina000_00.nsbca
+  0x000AD28C  ina000_01.nsbca
+  0x000AD29C  ina000_02.nsbca
+  0x000AD30C  ori000_sotai.nsbmd
+  0x000AD320  ori000_00.nsbca
+  0x000AD330  ori000_01.nsbca
+  0x000AD340  ori000_02.nsbca
+  0x000AD4AC  hyu000_00.nsbca
+  0x000AD4BC  hyu000_01.nsbca
+  0x000AD4CC  hyu000_02.nsbca
+  0x000ADBC4  mat002_mot.bin
+
+-- diagnostics, format strings and debug text --
+  0x00088264  battle/%s
+  0x00088294  %s.nsbca
+  0x00088FFC  %s_mdl.bin
+  0x00089018  %s_tex.bin
+  0x00089024  %s_sotai.nsbmd
+  0x00089034  %s_sotai.nsbtx
+  0x00089044  %s_sotai.boxtest
+  0x00097580  %s_sotai.nsbta
+  0x0009EA2C  %s.pix
+  0x0009EA34  %s.plt
+  0x0009EE78  1st - cpu %4d poly %4d
+  0x0009EE90  2nd - cpu %4d poly %4d
+  0x0009EEA8  update    %4d
+  0x0009EEB8  dma     %6d
+  0x0009EEC4  HP %4d Act %3d Cost %d
+  0x0009EEDC  1st - cpu %4d
+  0x0009EEEC  2nd - cpu %4d
+  0x0009EEFC  Motion Frame %d:%d
+  0x000A3434  weapon/%sa.bin
+  0x000A3484  weapon/%sb.bin
+  0x000A3610  weapon/%sc.bin
+  0x000A3638  weapon/%sd.bin
+  0x000A3A44  btmap_%03d
+  0x000A3A68  battle/%s_mdl.bin
+  0x000A3A7C  battle/%s_tex.bin
+
+========================================================================
+overlay_1.bin -- 577312 bytes, 1942 printable runs of 6 or more
+========================================================================
+
+-- build stamps (__DATE__ / __TIME__ shape) --
+  none
+
+-- SDK, middleware and company names --
+  0x00053075  ADXT/NITRO Ver.10.36 Build:Sep 28 2007 13:14:01
+  0x000530E1  NITROCI/NITRO Ver.1.02 Build:Sep 28 2007 13:14:04
+  0x00053125  NITRORNA/NITRO Ver.0.98 Build:Sep 28 2007 13:14:07
+  0x00053241  CRI CRW:STD/NITRO Ver.0.82 Build:Sep 28 2007 13:14:11
+  0x0006F701  ADXNITROSDK Ver.
+  0x0006F725  ADXNITRO Ver.1.00 Build:Sep 28 2007 13:14:05
+  0x0006F80C  E0092901:fname is null.(nitroCiGetFileSize)
+  0x0006F838  NitroFs
+  0x0006F840  NitroFs%08x.%08x.%08x
+  0x0006F858  E0092908:fname is null.(nitroCiOpen)
+  0x0006F880  E0092909:rw is illigal.(nitroCiOpen)
+  0x0006F8A8  E0092910:not enough handle resource.(nitroCiOpen)
+  0x0006F8DC  E0092920:can't open (nitroCiOpen)
+  0x0006F948  E0092913:nsct < 0.(nitroCiReqRd)
+  0x0006F96C  E0092914:buf is null.(nitroCiReqRd)
+  0x0006F990  E0092915:nsct >= 0x100000 .(nitroCiReqRd)
+  0x0006FAB9  MFCI/NITRO Ver.1.21 Build:Sep 28 2007 13:14:08
+  0x0006FDDC  CRI-MW
+  0x000710F1  AHX/NITRO Ver.1.59 Build:Sep 28 2007 13:14:10
+  0x0007534D  ADXCS/NITRO Ver.1.23 Build:Sep 28 2007 13:14:10
+  0x00075C20  CRISS is not initialized.
+
+-- absolute paths and source file names --
+  0x0001BB05  d.h
+  0x00052F39  /cAcCcOc_cgcmcqcwc
+  0x0006DBF0  s.bin
+  0x0006DC00  /ruc001.bin
+  0x0006DC14  03d.bin
+  0x0007825C  s_mdl.bin
+  0x00078270  /symbol_
+  0x00078270  s_mot.bin
+  0x00078288  s_tex.bin
+  0x00078398  /navimap_
+  0x00078E9C  /face00_1.fdt
+  0x00078ED0  /face51_
+  0x00079610  map.bin
+  0x0007CE8C  /world/worldtex.bin
+  0x0007CEA8  /world/WorldMap.dat
+  0x0007CEBC  /world/WorldArea.dat
+  0x0007CED4  /world/world2d.bin
+  0x0007D740  /npc_a.scr
+  0x0007D754  /npc_d.scr
+  0x0007D768  /npc_e.scr
+  0x0007D77C  /npc_f.scr
+  0x0007D790  /npc_g.scr
+  0x0007D7A4  /npc_h.scr
+  0x0007D7B8  /npc_j.scr
+  0x0007D7CC  /npc_l.scr
+  0x0007D7E0  /npc_m.scr
+  0x0007D7F4  /npc_b.scr
+  0x0007D808  /npc_c.scr
+  0x0007D81C  /npc_i.scr
+  0x0007D830  /npc_o.scr
+  0x0007D9C0  /skit16.bin
+  0x0007D9D4  /guide.bin
+  0x0007D9E8  /name_t_
+  0x0007D9E8  d.bin
+  0x0007DA00  /name_d_
+  0x0007DA18  /name_g_
+  0x00085580  /fldeff.bin
+  0x000858BC  /rcpicon.arc
+  0x00085B18  /itemicon.arc
+  0x00085B2C  /wpnicon.arc
+  0x00085B54  /amricon.arc
+  0x00085B7C  /acsicon.arc
+  0x00086464  /episode.bin
+  0x00088F5C  /charastand.arc
+  0x000894AC  eb.bin
+  0x0008C430  /cutin_000.bin
+  0x0008C5D4  /cutin_002.bin
+  0x0008C65C  /cutin_003.bin
+  0x0008C774  /cutin_004.bin
+  0x0008C7FC  /cutin_005.bin
+  0x0008C8E4  /cutin_006.bin
+  0x0008C9FC  /cutin_007.bin
+  0x0008CAE4  /cutin_001.bin
+  0x0008CC84  /staff.bin
+  0x0008CDAC  /logo.bin
+  0x0008CE88  /cutin_008.bin
+
+-- file names the code carries --
+  0x000768F8  _attr.dat
+  0x00076904  _attr_area.dat
+  0x0007829C  sotai.nsbmd
+  0x000782A8  sotai.nsbtx
+  0x000795AC  AttributeMap.dat
+  0x00079610  map.bin
+
+-- diagnostics, format strings and debug text --
+  0x00056C2C  room_%d
+  0x00056C3C  point_%d
+  0x00056C48  room_%02d
+  0x00056C54  _effect_%d
+  0x00056C60  room_en%02d
+  0x00056C6C  _chara_%03d
+  0x00056C9C  room_10_%02d
+  0x00056CAC  point_event_%d
+  0x00056CBC  point_chara_%d
+  0x00056D48  room_%02d_%%02d
+  0x00058B24  NA%02d_%04d_%03d_%03d_%1d
+  0x00058B40  NA%02d_%04d_%03d_%03d
+  0x00058B58  voice/%s.ahx
+  0x0006DBF0  chara/%s.bin
+  0x0006DC14  chara/%c%03d.bin
+  0x0006DC28  motion/%s/%02d.nsbca
+  0x0006E51C  E02080804 adxt_Create: parameter error
+  0x0006E5A0  E02080805 adxt_Destroy: parameter error
+  0x0006E5C8  E02080813 adxt_Stop: parameter error
+  0x0006E5F0  E02080814 adxt_GetStat: parameter error
+  0x0006E618  E02080815 adxt_GetTime: parameter error
+  0x0006E640  E02080820 adxt_GetNumChan: parameter error
+  0x0006E6A0  E07041801 adxt_SetOutPan: parameter error
+  0x0006E6CC  E8101208 adxt_SetOutPan: parameter error
+  0x0006E6F8  E02080823 adxt_SetOutVol: parameter error
+  0x0006E724  E02080824 adxt_GetOutVol: parameter error
+  0x0006E750  E02080828 adxt_SetLpFlg: parameter error
+  0x0006E77C  E02080846 adxt_Pause: parameter error
+  0x0006E7A4  E02080847 adxt_GetStatPause: parameter error
+  0x0006E7D4  E02080811 adxt_StartAfs: parameter error
+  0x0006E824  E02080807 adxt_StartFnameRange: parameter error
+  0x0006E854  E02080809 adxt_StartMem2: parameter error
+  0x0006E8AC  E02080810 adxt_StartMemIdx: parameter error
+  0x0006E974  E02080842 adxt_ExecHndl: parameter error
+  0x0006E9D0  SJRBF Error
+  0x0006EE44  SJMEM Error
+  0x0006F144  2103102:SVM:svm_unlock:lock type miss match.(type org=%d, type now=%d)
+  0x0006F400  cvFsOpen #5:vtbl error
+  0x0006F438  cvFsClose #1:handle error
+  0x0006F454  cvFsClose #2:vtbl error
+  0x0006F46C  cvFsTell #1:handle error
+  0x0006F488  cvFsTell #2:vtbl error
+  0x0006F4A0  cvFsSeek #1:handle error
+  0x0006F4BC  cvFsSeek #2:vtbl error
+  0x0006F4D4  cvFsReqRd #1:handle error
+  0x0006F4F0  cvFsReqRd #2:vtbl error
+  0x0006F508  cvFsGetStat #1:handle error
+  0x0006F524  cvFsGetStat #2:vtbl error
+  0x0006F5B4  cvFsGetFileSize #4:vtbl error
+  0x0006F840  NitroFs%08x.%08x.%08x
+  0x00075F78  %s_%s.nsbmd
+  0x00075F84  %s_%s.nsbta
+  0x00075F90  %s_%s.nsbtp
+  0x00075FA4  %s_floor_%s.dat
+  0x00076EBC  _%02d.nsbca
+  0x0007825C  battle/%s_mdl.bin
+  0x00078270  chara/symbol_%s_mot.bin
+  0x00078288  battle/%s_tex.bin
+  0x00078388  %s/%s_%s.bin
+  0x00078398  navi/navimap_%d.nbfc
+  0x0007894C  point_lumbering_%d
+  0x00078960  point_mining_%d
+  0x00078970  point_exit_%d
+  0x00078980  point_treasure_%d
+  0x00078EB4  facedata/face%02d_%1d.fdt
+  0x00078ED0  facedata/face51_%1d.fdt
+  0x000791CC  level_exit_%d
+  0x000794DC  point_chara_%05d
+  0x000795C0  field/e%03dt%03d.dat
+  0x000795D8  level_enter_%d
+  0x000795E8  point_enter_%d
+  0x00079604  .%d.layout
+  0x00079618  field/f%03d.bin
+  0x0007B840  _chara_%d
+  0x0007B880  _symbol_%d
+  0x0007B898  18cToiDungeonDebug3D
+  0x0007D9E8  facedata/name_t_%d.bin
+  0x0007DA00  facedata/name_d_%d.bin
+  0x0007DA18  facedata/name_g_%d.bin
+  0x000857D0  n%03d 
+  0x00085ECC  r^%3d 
+  0x00085ED4  b_%3d 
+  0x00088F70  chara_stand%02d.nbfc
+  0x00088F88  chara_stand%02d.nbfp
+  0x00088FB0  n%4d/%4d
+  0x0008CD6C  staff/%s.bin
+  0x0008CD7C  %s.imb
+  0x0008CD84  %s.plb
+  0x0008CD8C  %s.mpb
+
+========================================================================
+overlay_2.bin -- 89856 bytes, 134 printable runs of 6 or more
+========================================================================
+
+-- build stamps (__DATE__ / __TIME__ shape) --
+  none
+
+-- SDK, middleware and company names --
+
+-- absolute paths and source file names --
+  0x00015508  /op.mods
+  0x00015518  /down.bin
+  0x0001554C  /bgdata.arc
+  0x00015568  /logobng.arc
+  0x0001557C  /logonamco.arc
+  0x000155F0  /logoalfa.arc
+  0x00015634  /logoactimagine.arc
+  0x0001568C  /logocri.arc
+  0x000156D0  /titlemenu.arc
+  0x0001580C  /goverdata.arc
+  0x000159E0  /titlebg06_up.arc
+  0x00015A34  /titlebg04_up.arc
+  0x00015A88  /titlebg01_up.arc
+  0x00015ADC  /titlebg07.arc
+  0x00015B20  /titlebg06_down.arc
+  0x00015B78  /titlebg04_down.arc
+  0x00015BD0  /titlebg01_down.arc
+  0x00015C28  /titleobj.arc
+
+-- file names the code carries --
+
+-- diagnostics, format strings and debug text --
+  0x000157EC  chara%02d.nbfc
+  0x000157FC  chara%02d.nbfp
+

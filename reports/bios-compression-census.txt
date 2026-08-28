@@ -1,0 +1,124 @@
+field/f002.bin                                  364019  LZ77      ->    744500
+field/f003.bin                                   63100  LZ77      ->    124876
+field/f004.bin                                   39076  LZ77      ->     83692
+field/f005.bin                                   46114  LZ77      ->     99092
+field/f006.bin                                   54013  LZ77      ->    108772
+field/f007.bin                                   50456  LZ77      ->    105064
+field/f008.bin                                   62978  LZ77      ->    125596
+field/f009.bin                                   52486  LZ77      ->    111108
+field/f010.bin                                  104695  LZ77      ->    252780
+field/f011.bin                                  263958  LZ77      ->    506176
+field/f012.bin                                  111279  LZ77      ->    192124
+field/f013.bin                                  320031  LZ77      ->    575844
+field/f014.bin                                   57304  LZ77      ->    117028
+field/f015.bin                                   69537  LZ77      ->    146740
+field/f016.bin                                   54063  LZ77      ->    101740
+field/f017.bin                                   51489  LZ77      ->    104864
+field/f018.bin                                   59439  LZ77      ->    116784
+field/f019.bin                                   59745  LZ77      ->    115684
+field/f020.bin                                  327090  LZ77      ->    726176
+field/f021.bin                                  418712  LZ77      ->    684908
+field/f022.bin                                  291606  LZ77      ->    548996
+field/f023.bin                                   48721  LZ77      ->     83992
+field/f024.bin                                   49160  LZ77      ->     87328
+field/f025.bin                                   60775  LZ77      ->    110988
+field/f026.bin                                   53536  LZ77      ->     98232
+field/f027.bin                                  422656  LZ77      ->    915184
+field/f028.bin                                  256030  LZ77      ->    468908
+field/f029.bin                                   51139  LZ77      ->     95940
+field/f030.bin                                   44901  LZ77      ->     86184
+field/f031.bin                                   56040  LZ77      ->    110008
+field/f032.bin                                   48517  LZ77      ->     90696
+field/f033.bin                                  478474  LZ77      ->    817460
+field/f034.bin                                  183976  LZ77      ->    342160
+field/f035.bin                                   45432  LZ77      ->     81812
+field/f036.bin                                   41332  LZ77      ->     73900
+field/f037.bin                                   47525  LZ77      ->     86252
+field/f038.bin                                   54941  LZ77      ->    102488
+field/f039.bin                                  502559  LZ77      ->   1004008
+field/f040.bin                                  122671  LZ77      ->    230220
+field/f041.bin                                   61205  LZ77      ->    122964
+field/f042.bin                                   81776  LZ77      ->    165540
+field/f043.bin                                  200369  LZ77      ->    396796
+field/f044.bin                                   45674  LZ77      ->     90232
+field/f045.bin                                   51378  LZ77      ->    101720
+field/f046.bin                                   52756  LZ77      ->    103992
+field/f047.bin                                   58636  LZ77      ->    113004
+field/f048.bin                                  586752  LZ77      ->   1080144
+field/f049.bin                                  526443  LZ77      ->    917892
+field/f050.bin                                  380476  LZ77      ->    732320
+field/f051.bin                                   54964  LZ77      ->    106104
+field/f052.bin                                   55135  LZ77      ->    112520
+field/f053.bin                                   56366  LZ77      ->    106232
+field/f054.bin                                   61589  LZ77      ->    121748
+field/f055.bin                                  401642  LZ77      ->    749996
+field/f056.bin                                  392977  LZ77      ->    919148
+field/f058.bin                                  518152  LZ77      ->   1070316
+field/f059.bin                                  197659  LZ77      ->    347360
+field/f060.bin                                   49128  LZ77      ->     92832
+field/f062.bin                                  474075  LZ77      ->    886104
+field/f063.bin                                   54141  LZ77      ->    112548
+field/f064.bin                                   59113  LZ77      ->     85224
+field/f065.bin                                   38647  LZ77      ->     61652
+field/f066.bin                                   32205  LZ77      ->     85392
+field/f067.bin                                   18330  LZ77      ->     36768
+field/f068.bin                                  105663  LZ77      ->    197256
+field/f069.bin                                   10030  LZ77      ->     18412
+field/f070.bin                                   70647  LZ77      ->    121932
+field/f072.bin                                   38773  LZ77      ->     74212
+field/f074.bin                                  477371  LZ77      ->    918300
+field/f075.bin                                  346693  LZ77      ->    650264
+field/f076.bin                                  368463  LZ77      ->    693572
+field/f077.bin                                  422013  LZ77      ->    794048
+field/f078.bin                                  457852  LZ77      ->    850616
+field/f079.bin                                  442026  LZ77      ->    874544
+field/f080.bin                                  456411  LZ77      ->    823472
+field/f081.bin                                  430295  LZ77      ->    911548
+field/f139.bin                                   50280  LZ77      ->     86204
+field/f140.bin                                   52789  LZ77      ->     90256
+field/f141.bin                                  117537  LZ77      ->    210044
+field/f143.bin                                   93186  LZ77      ->    150724
+field/f144.bin                                  142892  LZ77      ->    245740
+field/f150.bin                                  127348  LZ77      ->    206200
+field/f151.bin                                   84446  LZ77      ->    142524
+field/f152.bin                                   77169  LZ77      ->    128332
+field/f155.bin                                   68148  LZ77      ->    154780
+field/f156.bin                                  263958  LZ77      ->    506176
+field/f157.bin                                  123512  LZ77      ->    227092
+field/f158.bin                                   35287  LZ77      ->     56444
+field/f159.bin                                   68890  LZ77      ->    113332
+field/f160.bin                                   40837  LZ77      ->     75232
+field/f161.bin                                  591079  LZ77      ->   1070040
+field/f162.bin                                  586792  LZ77      ->   1080204
+field/f163.bin                                   51313  LZ77      ->     88012
+field/f164.bin                                   60344  LZ77      ->    115224
+field/f165.bin                                   47696  LZ77      ->     74548
+field/f166.bin                                   44858  LZ77      ->     87204
+field/f167.bin                                   31230  LZ77      ->     62352
+field/f168.bin                                  208469  LZ77      ->    373964
+field/f169.bin                                  103822  LZ77      ->    191436
+field/f170.bin                                  110615  LZ77      ->    191824
+field/f172.bin                                   86998  LZ77      ->    156704
+motion/alb000/00_HUFF.bin                         3296  Huffman8  ->      3376
+motion/alb000/01_DIFF.bin                         6740  Diff16    ->      6736
+motion/alb000/01_HUFF.bin                         6108  Huffman4  ->      6736
+motion/alb000/01_LZ.bin                           6174  LZ77      ->      6736
+motion/alb000/01_RL.bin                           6657  RLE       ->      6736
+# 106 of 6378 files begin with a BIOS-format stream that decodes
+# and consumes the whole file
+#   Diff16        1 files         6740 ->        6736  1.00x
+#   Huffman4      1 files         6108 ->        6736  1.10x
+#   Huffman8      1 files         3296 ->        3376  1.02x
+#   LZ77        102 files     16901069 ->    32116356  1.90x
+#   RLE           1 files         6657 ->        6736  1.01x
+#   TOTAL       106 files     16923870 ->    32139940  1.90x
+#
+# for comparison, files whose first byte is a BIOS type byte and
+# whose next three are a non-zero size -- the header shape alone,
+# which for the permissive formats is all a census can measure:
+#   0x10 LZ77        103 files
+#   0x11 LZ11          2 files   (permissive: any byte sequence decodes)
+#   0x24 Huffman4      1 files   (permissive: any byte sequence decodes)
+#   0x28 Huffman8      1 files   (permissive: any byte sequence decodes)
+#   0x30 RLE           1 files   (permissive: any byte sequence decodes)
+#   0x82 Diff16        1 files   (permissive: any byte sequence decodes)

@@ -1,0 +1,68 @@
+_work/Tales of Innocence (Japan).nds -- 134217728 bytes
+expected chance hits for a four-byte needle in this image: 0.0312
+(the same needle in a 4.36 GB DVD would expect 1.01)
+
+== corpus markers ==
+NEEDLE                   HITS  FIRST OFFSETS
+CPS                         1  0x1B49624   Legendia 2005 sixteen-byte envelope
+CPS\0                       1  0x1E46ECD   Legendia 2005 envelope, other spelling
+TLPS                        0  -   Tales container tag
+TLPK                        3  0x1DDB85A 0x1DF55C7 0x1E034B7   Tales container tag
+AFS\0                       0  -   CRI AFS archive
+SCPK                        0  -   Destiny 2 2002 bundle
+THEIRSCE                    0  -   Tales script container
+FILE.FPB                    0  -   Destiny 2 2002 archive name
+FPS2                        0  -   Rebirth / Abyss archive
+FPS3                        0  -   Rebirth / Abyss archive
+FPS4                        0  -   Tales archive, later builds
+MSCF                        0  -   Microsoft cabinet
+CVMH                        0  -   CRI CVM volume header
+ROFS                        3  0x1CD4F0 0x1CD4F8 0x1CD500   CRI ROFS volume
+ROFSBLD                     0  -   CRI ROFS builder stamp
+SAMPLE_GAME_TITLE           0  -   CRI builder default title
+TO7                         7  0xA21709 0xE8765A 0x1C7658E 0x2FF9B2E 0x2FFAAAC 0x5F6FB6D 0x72A82FE   Abyss project tag
+TO8                         2  0x901BA9 0x2980274   project tag, next in the series
+ToR                         7  0x8FF1AE 0x1BE7FE1 0x201E98B 0x240546B 0x276C4C4 0x29307E1 0x2B70658   Rebirth project tag
+ToL                         7  0x10E31B3 0x110394B 0x2AE28A9 0x4554686 0x5AD0065 0x61A92C9 0x6CDDBAE   Legendia project tag
+tox                         9  0x56BC73 0x6C3E48 0xFB2DDB 0x1A7750B 0x1A7950B 0x201F208 0x30AC8D7 0x31182D7   Legendia project directory
+tor_                        0  -   Rebirth sound-effect prefix
+VAGp                        0  -   Sony ADPCM
+KORG                        0  -   sound bank
+ADX                        17  0x1AAA75 0x1C5CA1 0x1C5D6D 0x1C5DB9 0x1C5E22 0x1C7101 0x1C7125 0x1C7154   CRI ADX
+.slz                        0  -   Abyss compressed-member extension
+SLZ                         8  0x17C944E 0x2364BD5 0x2393061 0x23A0661 0x4626F17 0x695CF5A 0x6B39AF8 0x6C14AB8   Abyss compressed-member extension, upper case
+
+== platform magics ==
+NEEDLE                   HITS  FIRST OFFSETS
+SDAT                        1  0x3455A00   Nitro sound archive
+NARC                        0  -   Nitro archive
+BMD0                     1345  0x56314 0x563DC 0x248658 0x26B2B4 0x27FC58 0x29A258 0x29F658 0x2A4A58   Nitro 3D model
+BTX0                      752  0x56318 0x563E0 0x567BC 0x27B434 0x298E34 0x29E234 0x2A3634 0x2A8A34   Nitro 3D texture
+BCA0                     3106  0x56308 0x563D0 0x24F5F0 0x25041C 0x2511D8 0x2521CC 0x2534F0 0x25414C   Nitro 3D joint animation
+BTA0                      284  0x5630C 0x563D4 0x5C7EA0 0x5F181C 0x606AB4 0x61BC2C 0x689978 0x698D74   Nitro 3D texture animation
+BMA0                        2  0x56304 0x563CC   Nitro 3D material animation
+BVA0                        2  0x56300 0x563C8   Nitro 3D visibility animation
+BTP0                        2  0x56310 0x563D8   Nitro 3D texture-pattern animation
+RLCN                        0  -   Nitro palette (NCLR)
+RGCN                        0  -   Nitro character graphics (NCGR)
+RCSN                        0  -   Nitro screen (NSCR)
+RECN                        0  -   Nitro cell (NCER)
+RNAN                        0  -   Nitro cell animation (NANR)
+SSEQ                       50  0x9A0F01 0x345EE20 0x345F660 0x3460960 0x3462800 0x3463EA0 0x3465740 0x3467E00   Nitro sequence
+SWAR                       68  0x34A3A40 0x34BF1C0 0x34DB160 0x34F6FC0 0x3511800 0x352F640 0x354BFA0 0x35692A0   Nitro wave archive
+SBNK                       69  0x349C720 0x349C7C0 0x349C900 0x349CA60 0x349CB80 0x349CCC0 0x349D420 0x349D640   Nitro bank
+STRM                      626  0x3458EAD 0x3458EBD 0x3458ECD 0x3458EDC 0x3458EEB 0x3458EFF 0x3458F0E 0x3458F25   Nitro stream
+SWAV                        0  -   Nitro wave
+VXDS                        0  -   Actimagine VX video
+IMD                         0  -   Nitro intermediate model, XML
+
+== BIOS compression headers, as the first byte of an aligned word ==
+A type byte alone means nothing; these are the offsets where a
+BIOS-format header is followed by a plausible decompressed size.
+  0x10 LZ77         308782 aligned words start with it,   196471 have a plausible size
+  0x11 LZ11         210219 aligned words start with it,   129603 have a plausible size
+  0x24 Huffman4     245579 aligned words start with it,   169038 have a plausible size
+  0x28 Huffman8     174566 aligned words start with it,   118713 have a plausible size
+  0x30 RLE          193514 aligned words start with it,   122295 have a plausible size
+  0x81 Diff8        111605 aligned words start with it,    59782 have a plausible size
+  0x82 Diff16       144675 aligned words start with it,    58441 have a plausible size

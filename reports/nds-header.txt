@@ -1,0 +1,62 @@
+image                Tales of Innocence (Japan).nds
+file size            134217728 bytes
+
+game title           'TOIINNOCENCE'
+game code            'AYTJ'
+maker code           'AF'
+unit code            0x00
+encryption seed      0x00
+device capacity      0x0A  = 134217728 bytes
+reserved +0x15..1C   0000000000000000
+region byte          0x00
+ROM version          0x00
+autostart            0x00
+
+arm9_rom_off         0x00004000  (16384)
+arm9_entry           0x02000800  (33556480)
+arm9_ram             0x02000000  (33554432)
+arm9_size            0x000A5458  (676952)
+arm7_rom_off         0x001FAA00  (2075136)
+arm7_entry           0x02380000  (37224448)
+arm7_ram             0x02380000  (37224448)
+arm7_size            0x00026DB8  (159160)
+fnt_off              0x00221800  (2234368)
+fnt_size             0x00019BC6  (105414)
+fat_off              0x0023B400  (2339840)
+fat_size             0x0000C750  (51024)
+arm9_ovt_off         0x000A9600  (693760)
+arm9_ovt_size        0x00000060  (96)
+arm7_ovt_off         0x00000000  (0)
+arm7_ovt_size        0x00000000  (0)
+normal_cmd_setting   0x00416657  (4286039)
+key1_cmd_setting     0x081808F8  (135792888)
+banner_off           0x00247C00  (2391040)
+arm9_autoload        0x02000AAC  (33557164)
+arm7_autoload        0x02380188  (37224840)
+ntr_rom_size         0x07BE647C  (129918076)
+header_size          0x00004000  (16384)
+
+secure area CRC      0xC0C7
+secure area delay    0x0D7E
+secure area disable  0000000000000000
+logo CRC             0xCF56  (recomputed 0xCF56, OK; retail value 0xCF56)
+header CRC           0xFF17  (recomputed 0xFF17, OK)
+debug +0x160..17F    0000000000000000000000000000000000000000000000000000000000000000
+
+FAT entries          6378
+named files          6375
+directories          156
+ARM9 overlays        3
+ARM7 overlays        0
+highest FAT end      129918076 (0x7BE647C)
+declared used size   129918076 (0x7BE647C)
+trailing bytes       4299652 (3.20% of the cartridge)
+trailing byte values [255]
+
+banner version       0x0001 at 0x247C00, CRC OK
+  title[ja]           'Tales of Innocence\nバンダイナムコゲームス'
+  title[en]           'Tales of Innocence\nバンダイナムコゲームス'
+  title[fr]           'Tales of Innocence\nバンダイナムコゲームス'
+  title[de]           'Tales of Innocence\nバンダイナムコゲームス'
+  title[it]           'Tales of Innocence\nバンダイナムコゲームス'
+  title[es]           'Tales of Innocence\nバンダイナムコゲームス'

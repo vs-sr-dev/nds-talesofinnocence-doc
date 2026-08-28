@@ -1,0 +1,44 @@
+cartridge          134217728 bytes (device capacity byte 0x0A)
+declared used      129918076 bytes
+
+== where the cartridge went ==
+  header                                      16384   0.012%
+  ARM9 module (secure area included)         676952   0.504%
+  ARM7 module                                159160   0.119%
+  file name table                            105414   0.079%
+  file allocation table                       51024   0.038%
+  banner                                       2560   0.002%
+  files                                   125906775  93.808%
+  slack inside the used area                2999807   2.235%  (inter-file alignment)
+  unused tail                               4299652   3.203%  (0 zero, 4299652 0xFF)
+
+== files by class ==
+  CLASS                     FILES        BYTES   % CART  % FILES
+  audio                      2445     64940354   48.38%   51.58%
+  container                  1346     45577891   33.96%   36.20%
+  3D animation               1521      6848807    5.10%    5.44%
+  video                         1      4055640    3.02%    3.22%
+  other                       860      2665907    1.99%    2.12%
+  2D graphics                 141      1652302    1.23%    1.31%
+  font                          6       117624    0.09%    0.09%
+  geometry / collision         54        27524    0.02%    0.02%
+  text                          1        20726    0.02%    0.02%
+  TOTAL                      6375    125906775   93.81%  100.00%
+
+== inside the EZBIND containers ==
+  1344 archives, 9646 members, 60416314 bytes once decompressed
+  CLASS                    MEMBERS        BYTES % MEMBERS
+  3D model                   1683     37145808   61.48%
+  3D texture                  787      9129448   15.11%
+  3D animation               2673      8884476   14.71%
+  geometry / collision       1269      2273600    3.76%
+  other                      1991      2121477    3.51%
+  2D graphics                1241       848322    1.40%
+  font                          1         8228    0.01%
+  text                          1         4955    0.01%
+
+== the four in-house formats, checked by arithmetic ==
+  .nbm      0 of     0 satisfy the layout equation
+  .ana      0 of     0 satisfy the layout equation
+  .apa      0 of     0 satisfy the layout equation
+  .asc      0 of     0 satisfy the layout equation

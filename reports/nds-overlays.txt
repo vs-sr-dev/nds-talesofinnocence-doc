@@ -1,0 +1,5 @@
+# ARM9 overlay table: 3 entries
+  ovl   0  file    0  ram 0x02120E60  size  712800  bss    224  compressed False (0)
+  ovl   1  file    2  ram 0x02120E60  size  577312  bss 159872  compressed False (0)
+  ovl   2  file    1  ram 0x02120E60  size   89856  bss    160  compressed False (0)
+# ARM7 overlay table: 0 entries

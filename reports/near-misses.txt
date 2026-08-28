@@ -1,0 +1,302 @@
+############ arm9 ############
+========================================================================
+_work/arm9.bin -- every site the constant scan and the structure probe found
+========================================================================
+
+-- ARM immediate fields matching 4070, 4071, 4078, 4079, 4080 (22568 instructions scanned) --
+    none
+
+-- THUMB literal fields matching the same set (43310 scanned) --
+    none
+
+-- 32-bit words in the pool equal to one of the constants (169238 words scanned) --
+    none
+
+-- the structure probe's sites --
+
+   * every immediate equal to 0xFF00 (the control-register refill would be an `orr`)
+     0x02046A38  and     r3,r3,#65280
+     0x02046B00  and     r12,r12,#65280
+     0x02046BB8  and     r2,r2,#65280
+     0x020592B8  cmp     r0,#65280
+     0x020593BC  cmp     r0,#65280
+
+   * every `lsl #20` immediately followed by `lsr #20` (the twelve-bit mask)
+
+   * every `add #19`, both instruction sets
+     ARM   0x02069AE4  addeq   r2,r0,#19
+     THUMB 0x0200CD14  add r6,#19 -- containing ARM word 0xE1B03613  movs    r3,r3,lsl r6
+     THUMB 0x0200CD64  add r4,#19 -- containing ARM word 0xE1B03413  movs    r3,r3,lsl r4
+     THUMB 0x0200EF34  add r5,#19 -- containing ARM word 0xE1B03513  movs    r3,r3,lsl r5
+     THUMB 0x02062334  add r7,#19 -- containing ARM word 0x980A3713  stmlsda r10,{r0-r1,r4,r8-r10,r12-sp}
+     THUMB 0x02065AEA  add r1,#19 -- containing ARM word 0x31131C29  tstcc   r3,r9,lsr #24
+     THUMB 0x02069318  add r7,#19 -- containing ARM word 0x1C403713  .word   0x1C403713
+     THUMB 0x0206939C  add r7,#19 -- containing ARM word 0x1C403713  .word   0x1C403713
+     THUMB 0x02069404  add r6,#19 -- containing ARM word 0x00413613  subeq   r3,r1,r3,lsl r6
+
+   * what the 4080 sites actually are
+     The `mov r0,#4080` instructions all sit in one region of eight-byte
+     stubs -- `mov r0,#K ; bx lr` or `ldr r0,[pc,..] ; bx lr` -- reached by a
+     table of `b` instructions above them, which is the ARM computed-branch
+     idiom.  What they return is a 4,096-scaled trigonometric table in whole
+     degrees.
+     27 constant-returning stubs in the image
+     the first 0 are round(4096 * cos(theta)) for theta = 0..-1 degrees, to within one
+     first twelve: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+     round(4096 * cos 5deg) = 4080 -- which is the 4080
+
+
+   * every `and #15` within eight instructions of an ARM `lsr #4`
+
+############ arm7 ############
+========================================================================
+_work/arm7.bin -- every site the constant scan and the structure probe found
+========================================================================
+
+-- ARM immediate fields matching 4070, 4071, 4078, 4079, 4080 (11882 instructions scanned) --
+    none
+
+-- THUMB literal fields matching the same set (5253 scanned) --
+    none
+
+-- 32-bit words in the pool equal to one of the constants (39790 words scanned) --
+    none
+
+-- the structure probe's sites --
+
+   * every immediate equal to 0xFF00 (the control-register refill would be an `orr`)
+     0x02380CF0  and     r2,r7,#65280
+     0x023862CC  and     r3,r3,#65280
+     0x02386394  and     r12,r12,#65280
+     0x0238644C  and     r2,r2,#65280
+     0x02388B60  add     r0,r2,#65280
+     0x0238ABF4  and     r3,r0,#65280
+     0x0238AC10  and     r3,r3,#65280
+     0x0238AC14  and     r12,r0,#65280
+     0x0238BF88  and     r0,r1,#65280
+     0x0238C9F0  and     r0,r2,#65280
+     0x0238D4B4  and     r0,r2,#65280
+     0x0238FE0C  and     r0,r1,#65280
+     0x02392048  add     r0,r0,#65280
+     0x023921C0  add     r0,r0,#65280
+     0x02394320  add     r0,r0,#65280
+     0x02397990  add     r0,r0,#65280
+     0x0239A268  andeq   r2,r2,#65280
+     0x0239C13C  add     r0,r0,#65280
+     0x0239F948  add     r0,r0,#65280
+     0x023A4550  and     r2,r0,#65280
+     0x023A45A4  and     r12,r12,#65280
+     0x023A4AF4  and     r2,r0,#65280
+     0x023A4C1C  and     r2,r0,#65280
+     0x023A4D48  and     r3,r0,#65280
+     0x023A4E54  and     r3,r0,#65280
+     0x023A4F4C  and     r2,r0,#65280
+     0x023A4FD4  and     r2,r0,#65280
+     0x023A6678  bic     r3,r3,#65280
+
+   * every `lsl #20` immediately followed by `lsr #20` (the twelve-bit mask)
+
+   * every `add #19`, both instruction sets
+
+   * what the 4080 sites actually are
+     The `mov r0,#4080` instructions all sit in one region of eight-byte
+     stubs -- `mov r0,#K ; bx lr` or `ldr r0,[pc,..] ; bx lr` -- reached by a
+     table of `b` instructions above them, which is the ARM computed-branch
+     idiom.  What they return is a 4,096-scaled trigonometric table in whole
+     degrees.
+     28 constant-returning stubs in the image
+     the first 0 are round(4096 * cos(theta)) for theta = 0..-1 degrees, to within one
+     first twelve: 1, 1, 0, 41938944, 58720256, 0, 41914780, 0, 41941632, 1, 1, 1
+     round(4096 * cos 5deg) = 4080 -- which is the 4080
+
+
+   * every `and #15` within eight instructions of an ARM `lsr #4`
+
+############ overlay_0 ############
+========================================================================
+_work/overlay_0.bin -- every site the constant scan and the structure probe found
+========================================================================
+
+-- ARM immediate fields matching 4070, 4071, 4078, 4079, 4080 (22350 instructions scanned) --
+    none
+
+-- THUMB literal fields matching the same set (56540 scanned) --
+    none
+
+-- 32-bit words in the pool equal to one of the constants (178200 words scanned) --
+    none
+
+-- the structure probe's sites --
+
+   * every immediate equal to 0xFF00 (the control-register refill would be an `orr`)
+
+   * every `lsl #20` immediately followed by `lsr #20` (the twelve-bit mask)
+
+   * every `add #19`, both instruction sets
+     THUMB 0x02128D4A  add r2,#19 -- containing ARM word 0x32131C6D  andccs  r1,r3,#27904
+
+   * what the 4080 sites actually are
+     The `mov r0,#4080` instructions all sit in one region of eight-byte
+     stubs -- `mov r0,#K ; bx lr` or `ldr r0,[pc,..] ; bx lr` -- reached by a
+     table of `b` instructions above them, which is the ARM computed-branch
+     idiom.  What they return is a 4,096-scaled trigonometric table in whole
+     degrees.
+     0 constant-returning stubs in the image
+
+
+   * every `and #15` within eight instructions of an ARM `lsr #4`
+
+############ overlay_1 ############
+========================================================================
+_work/overlay_1.bin -- every site the constant scan and the structure probe found
+========================================================================
+
+-- ARM immediate fields matching 4070, 4071, 4078, 4079, 4080 (18419 instructions scanned) --
+    none
+
+-- THUMB literal fields matching the same set (30972 scanned) --
+    none
+
+-- 32-bit words in the pool equal to one of the constants (144328 words scanned) --
+    none
+
+-- the structure probe's sites --
+
+   * every immediate equal to 0xFF00 (the control-register refill would be an `orr`)
+     0x021272A4  and     r0,r0,#65280
+     0x02127CDC  and     r1,r1,#65280
+     0x02127D10  and     r1,r1,#65280
+     0x02127D40  and     r1,r1,#65280
+     0x02127D6C  and     r1,r1,#65280
+     0x02127DA0  and     r1,r1,#65280
+     0x02127E28  and     r0,r0,#65280
+     0x02127E5C  and     r0,r0,#65280
+     0x02127E88  and     r0,r0,#65280
+     0x02127EA4  and     r0,r0,#65280
+     0x02127EC0  and     r0,r0,#65280
+     0x02127EDC  and     r0,r0,#65280
+     0x02127F68  and     r2,r2,#65280
+     0x02127FA0  and     r0,r0,#65280
+     0x02127FD8  and     r1,r1,#65280
+     0x02127FFC  and     r1,r1,#65280
+     0x02128030  and     r3,r3,#65280
+     0x02128054  and     r3,r3,#65280
+     0x02128084  and     r3,r3,#65280
+     0x021280B4  and     r3,r3,#65280
+     0x021280E4  and     r2,r2,#65280
+     0x02128170  and     r2,r2,#65280
+     0x021281AC  and     r0,r0,#65280
+     0x021281EC  and     r0,r0,#65280
+     0x02128250  and     r3,r3,#65280
+     0x021282AC  and     r3,r3,#65280
+     0x021282C8  and     r2,r2,#65280
+     0x021282E4  and     r1,r1,#65280
+     0x0212831C  and     r1,r1,#65280
+     0x02128354  and     r1,r1,#65280
+     0x021283C4  and     r4,r4,#65280
+     0x0212859C  and     r4,r4,#65280
+     0x02128620  and     r4,r4,#65280
+     0x021289AC  and     r12,r12,#65280
+     0x02128A34  and     r12,r12,#65280
+     0x02129A8C  and     r0,r0,#65280
+     0x0212C964  and     r0,r0,#65280
+     0x0212C9A8  and     r0,r0,#65280
+
+   * every `lsl #20` immediately followed by `lsr #20` (the twelve-bit mask)
+
+   * every `add #19`, both instruction sets
+     THUMB 0x0213699C  add r0,#19 -- containing ARM word 0xE5D03013  ldrb   r3,[r0,#19]
+
+   * what the 4080 sites actually are
+     The `mov r0,#4080` instructions all sit in one region of eight-byte
+     stubs -- `mov r0,#K ; bx lr` or `ldr r0,[pc,..] ; bx lr` -- reached by a
+     table of `b` instructions above them, which is the ARM computed-branch
+     idiom.  What they return is a 4,096-scaled trigonometric table in whole
+     degrees.
+     10 constant-returning stubs in the image
+     the first 0 are round(4096 * cos(theta)) for theta = 0..-1 degrees, to within one
+     first twelve: 16, 1, 1, 35335864, 0, 35194368, 0, 16, 96, 0
+     round(4096 * cos 5deg) = 4080 -- which is the 4080
+
+
+   * every `and #15` within eight instructions of an ARM `lsr #4`
+
+############ overlay_2 ############
+========================================================================
+_work/overlay_2.bin -- every site the constant scan and the structure probe found
+========================================================================
+
+-- ARM immediate fields matching 4070, 4071, 4078, 4079, 4080 (3270 instructions scanned) --
+    none
+
+-- THUMB literal fields matching the same set (4230 scanned) --
+    none
+
+-- 32-bit words in the pool equal to one of the constants (22464 words scanned) --
+    none
+
+-- the structure probe's sites --
+
+   * every immediate equal to 0xFF00 (the control-register refill would be an `orr`)
+
+   * every `lsl #20` immediately followed by `lsr #20` (the twelve-bit mask)
+
+   * every `add #19`, both instruction sets
+     THUMB 0x0212F8A0  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x0212FAF8  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x0212FD30  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x0212FF58  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x0213007C  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x021301A0  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x021302AC  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x021303D0  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x021304F4  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130600  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130730  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130870  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130988  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130AA8  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130BB8  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02130CB0  add r6,#19 -- containing ARM word 0xE1A03613  mov     r3,r3,lsl r6
+     THUMB 0x02131150  add r7,#19 -- containing ARM word 0xE1A03713  mov     r3,r3,lsl r7
+     THUMB 0x0213128C  add r7,#19 -- containing ARM word 0xE1A03713  mov     r3,r3,lsl r7
+     THUMB 0x021312F8  add r7,#19 -- containing ARM word 0xE1A03713  mov     r3,r3,lsl r7
+     THUMB 0x021334D4  add r5,#19 -- containing ARM word 0xE1B03513  movs    r3,r3,lsl r5
+     THUMB 0x02133530  add r5,#19 -- containing ARM word 0xE1B03513  movs    r3,r3,lsl r5
+     THUMB 0x021335AC  add r5,#19 -- containing ARM word 0xE1B03513  movs    r3,r3,lsl r5
+
+   * what the 4080 sites actually are
+     The `mov r0,#4080` instructions all sit in one region of eight-byte
+     stubs -- `mov r0,#K ; bx lr` or `ldr r0,[pc,..] ; bx lr` -- reached by a
+     table of `b` instructions above them, which is the ARM computed-branch
+     idiom.  What they return is a 4,096-scaled trigonometric table in whole
+     degrees.
+     4 constant-returning stubs in the image
+     the first 0 are round(4096 * cos(theta)) for theta = 0..-1 degrees, to within one
+     first twelve: 1, 1, 26012, 9600
+     round(4096 * cos 5deg) = 4080 -- which is the 4080
+
+
+   * every `and #15` within eight instructions of an ARM `lsr #4`
+     0x021334C0
+      021334B8  E28B7A02   add     r7,r11,#8192
+      021334BC  E7D774A4   ldrb   r7,[r7,r4,lsr #9]
+      021334C0  E204500F   and     r5,r4,#15
+      021334C4  E1A04224   mov     r4,r4,lsr #4
+      021334C8  E204601F   and     r6,r4,#31
+      021334CC  E0866007   add     r6,r6,r7
+     0x0213350C
+      02133504  E08B4084   add     r4,r11,r4,lsl #1
+      02133508  E1D440B0   ldrh   r4,[r4]
+      0213350C  E204500F   and     r5,r4,#15
+      02133510  E1A04224   mov     r4,r4,lsr #4
+      02133514  E204601F   and     r6,r4,#31
+      02133518  E1A042A4   mov     r4,r4,lsr #5
+     0x0213359C
+      02133594  E08B4084   add     r4,r11,r4,lsl #1
+      02133598  E1D440B0   ldrh   r4,[r4]
+      0213359C  E204500F   and     r5,r4,#15
+      021335A0  E1A04224   mov     r4,r4,lsr #4
+      021335A4  E204601F   and     r6,r4,#31
+      021335A8  E1A042A4   mov     r4,r4,lsr #5
+

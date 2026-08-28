@@ -1,0 +1,67 @@
+== Actimagine Mobiclip ==
+  op.mods -- 4055640 bytes
+  magic            b'MODS'
+  +0x04            b'N2\n\x00'
+  frame count      2136
+  frame size       256 x 192
+  audio rate       32000 Hz
+  the remaining header words, unnamed because nothing here
+  establishes their meaning:
+    +0x14 = 402250933 (0x17F9DCB5)
+    +0x18 = 131074 (0x00020002)
+    +0x20 = 24348 (0x00005F1C)
+    +0x24 = 0 (0x00000000)
+    +0x28 = 4055184 (0x003DE090)
+    +0x2c = 57 (0x00000039)
+    +0x30 = 18153478 (0x01150006)
+  No frame rate field is identified, so no duration is quoted.
+
+== CRI ADX / AHX streams ==
+  2444 streams, 56208162 bytes
+  KIND    CH     RATE   FILES         BYTES       DURATION
+  ADX      1    16364      87       3050844      330.8 s = 0.09 h
+  ADX      2    32728       1       6627478      180.0 s = 0.05 h
+  AHX      1    16364    2356      46529840     9788.9 s = 2.72 h
+  TOTAL                  2444      56208162    10299.8 s = 2.86 h
+
+  by directory
+    voice          2443 files     49580684 bytes    10119.8 s = 2.81 h
+    test              1 files      6627478 bytes      180.0 s = 0.05 h
+
+  the five longest
+    test/ed.adx                                    180.00 s  ADX 32728 Hz
+    voice/NA00_3003_001_008.ahx                     52.28 s  AHX 16364 Hz
+    voice/NA00_1603_027_007.ahx                     13.36 s  AHX 16364 Hz
+    voice/NA00_2203_227_008.ahx                     13.03 s  AHX 16364 Hz
+    voice/NA00_2604_004_005.ahx                     12.98 s  AHX 16364 Hz
+
+== the sound archive ==
+  SWAR      68 members,    4976384 bytes
+  STRM     310 members,    3436256 bytes
+  SSEQ      49 members,     217472 bytes
+  SSAR      20 members,      34688 bytes
+  SBNK      69 members,      29472 bytes
+
+== streamed audio (STRM), from each stream's own HEAD block ==
+  310 streams, 3436256 bytes, 396.8 seconds = 0.11 hours
+    format 2 (IMA-ADPCM): 310 streams
+    16892 Hz: 309 streams
+    47605 Hz: 1 streams
+    channel counts: {1: 310}
+    the rate field is corroborated by the timer beside it:
+    the DS sound clock is 33,513,982 / 2 Hz, and rate x timer x 32
+    should land on it.
+       16892 Hz, timer  31 -> 16892 x 31 x 32 = 16756864
+       47605 Hz, timer  11 -> 47605 x 11 x 32 = 16756960
+
+== streams by name prefix ==
+  STRM         314  e.g. STRM_ruca_Weak, STRM_ruca_Dead, STRM_ruca_Awakening
+
+== sampled waves (SWAV inside SWAR) ==
+  819 waves, 4958412 bytes, 426.0 seconds = 0.12 hours
+
+== video (Actimagine VXDS) ==
+  FILE                         BYTES     +4     W     H FPS(16.16)    CH       RATE
+  0 files, 0 bytes
+  the remaining header words are printed raw because their meaning
+  is not established here:

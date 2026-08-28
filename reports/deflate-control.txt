@@ -1,0 +1,24 @@
+== the image as a whole ==
+  Tales of Innocence (Japan).nds       134217728 bytes  deflates to  73.47%
+
+== the parts of it ==
+  arm9.bin                                676952 bytes  deflates to  55.44%
+  arm7.bin                                159160 bytes  deflates to  52.07%
+  overlay_0.bin                           712800 bytes  deflates to  46.53%
+  overlay_1.bin                           577312 bytes  deflates to  46.46%
+  overlay_2.bin                            89856 bytes  deflates to  41.96%
+
+== the files, by the budget's own classes ==
+  CLASS                     FILES         BYTES      DEFLATED    RATIO
+  audio                      2445      64940354      58722641   90.43%
+  container                  1245      28682996      14980998   52.23%
+  container (already in a BIOS stream)    101      16894895      15420726   91.27%
+  3D animation               1516       6819832       5393699   79.09%
+  video                         1       4055640       4024949   99.24%
+  other                       863       4045875       1579891   39.05%
+  2D graphics                 141       1652302         89734    5.43%
+  font                          6        117624         71453   60.75%
+  3D animation (already in a BIOS stream)      5         28975         25035   86.40%
+  geometry / collision         54         27524         12224   44.41%
+  text                          1         20726          5952   28.72%
+  TOTAL                      6378     127286743     100327302   78.82%

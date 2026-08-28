@@ -1,0 +1,40 @@
+secure area: ROM 0x4000..0x8000, 2 KiB of which is encrypted on the
+cartridge (ROM 0x4000..0x4800)
+
+  declared CRC-16   0xC0C7
+  as dumped         0xB068
+  with 'encryObj' restored 0x3906
+  with eight zero bytes 0x160E
+  with eight 0xFF bytes 0xCFD2
+  first sixteen bytes: ff de ff e7 ff de ff e7 ff de ff e7 ff de 38 bd
+
+  entropy over the 2 KiB   7.893 bits
+  zero bytes               17 of 2048
+  distinct byte values     256 of 256
+
+  `svc #N ; bx lr` pairs   17
+      0x02000074  svc #0x04  IntrWait
+      0x020000EC  svc #0x0E  GetCRC16
+      0x020001BA  svc #0x03  Stop/Sleep
+      0x0200021C  svc #0x13  HuffUnCompReadByCallback
+      0x02000286  svc #0x0C  CpuFastSet
+      0x020002FC  svc #0x05  VBlankIntrWait
+      0x0200036E  svc #0x00  SoftReset
+      0x020003E8  svc #0x06  Halt
+      0x02000448  svc #0x09  Div
+      0x020004AA  svc #0x0F  IsDebugger
+      0x0200051C  svc #0x0D  Sqrt
+      0x02000590  svc #0x15  RLUnCompReadByCallbackWrite16bit
+      0x02000604  svc #0x14  RLUnCompReadNormalWrite8bit  (the GBA "RLUnComp")
+      0x02000652  svc #0x0B  CpuSet
+      0x020006C2  svc #0x10  BitUnPack
+      0x02000728  svc #0x12  LZ77UnCompReadByCallbackWrite16bit
+      0x02000780  svc #0x11  LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77UnComp")
+
+  control: op.mods
+  1980 windows of 2048 bytes, entropy 7.548 over the first window
+  `svc #N ; bx lr` pairs found: 0
+
+  A region of 2048 bytes that contains 17 well-formed SDK
+  wrappers where 4055040 bytes of incompressible data contain 0 is
+  readable code embedded in filler, not ciphertext.

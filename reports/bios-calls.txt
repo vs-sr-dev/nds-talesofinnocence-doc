@@ -1,0 +1,143 @@
+############ ARM9 + the three overlays, one wrapper table ############
+_work/arm9.bin -- 676952 bytes
+  2201 words / 178 halfwords match the SWI encoding at all
+  2 ARM + 25 THUMB survive the two filters (comment field NN0000,
+  service number <= 0x2B)
+
+  of those, 17 are followed by `bx lr` -- the shape of an SDK
+  SVC wrapper, and the only form that is certainly an instruction.
+
+  SET    SWI    COUNT  SERVICE
+  thumb  0x04       1  IntrWait
+  thumb  0x0E       1  GetCRC16
+  thumb  0x03       1  Stop/Sleep
+  thumb  0x13       1  HuffUnCompReadByCallback  <-- decompression
+  thumb  0x0C       1  CpuFastSet
+  thumb  0x05       1  VBlankIntrWait
+  thumb  0x00       1  SoftReset
+  thumb  0x06       1  Halt
+  thumb  0x09       1  Div
+  thumb  0x0F       1  IsDebugger
+  thumb  0x0D       1  Sqrt
+  thumb  0x15       1  RLUnCompReadByCallbackWrite16bit  <-- decompression
+  thumb  0x14       1  RLUnCompReadNormalWrite8bit  (the GBA "RLUnComp")  <-- decompression
+  thumb  0x0B       1  CpuSet
+  thumb  0x10       1  BitUnPack  <-- decompression
+  thumb  0x12       1  LZ77UnCompReadByCallbackWrite16bit  <-- decompression
+  thumb  0x11       1  LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77UnComp")  <-- decompression
+
+  decompression wrappers linked into this image:
+    0x0200021C  svc #0x13 ; bx lr   HuffUnCompReadByCallback
+    0x02000590  svc #0x15 ; bx lr   RLUnCompReadByCallbackWrite16bit
+    0x02000604  svc #0x14 ; bx lr   RLUnCompReadNormalWrite8bit  (the GBA "RLUnComp")
+    0x020006C2  svc #0x10 ; bx lr   BitUnPack
+    0x02000728  svc #0x12 ; bx lr   LZ77UnCompReadByCallbackWrite16bit
+    0x02000780  svc #0x11 ; bx lr   LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77UnComp")
+
+  A wrapper being *linked* says only that the SDK library was
+  linked.  The question is whether anything calls it, so every
+  branch in the image is resolved and counted against each one.
+  13382 distinct branch targets in this image
+  12678 distinct branch targets in _work/overlay_0.bin (loaded at 0x02120E60)
+  10528 distinct branch targets in _work/overlay_1.bin (loaded at 0x02120E60)
+  1375 distinct branch targets in _work/overlay_2.bin (loaded at 0x02120E60)
+  36628 distinct branch targets over all 4 images
+
+  WRAPPER      SWI    SERVICE                                        CALL SITES
+  0x02000074  0x04   IntrWait                                         0
+  0x020000EC  0x0E   GetCRC16                                         0
+  0x020001BA  0x03   Stop/Sleep                                       7
+        arm blx    from 0x02056280
+        arm blx    from 0x0205632C
+        arm blx    from 0x02058848
+        thumb bl   from 0x020419E2
+        thumb bl   from 0x02041C62
+        thumb bl   from 0x02041CA2
+        thumb bl   from 0x02041E6C
+  0x0200021C  0x13   HuffUnCompReadByCallback                         0  <-- decompression
+  0x02000286  0x0C   CpuFastSet                                       0
+  0x020002FC  0x05   VBlankIntrWait                                   0
+  0x0200036E  0x00   SoftReset                                        0
+  0x020003E8  0x06   Halt                                             0
+  0x02000448  0x09   Div                                              0
+  0x020004AA  0x0F   IsDebugger                                       0
+  0x0200051C  0x0D   Sqrt                                             0
+  0x02000590  0x15   RLUnCompReadByCallbackWrite16bit                 0  <-- decompression
+  0x02000604  0x14   RLUnCompReadNormalWrite8bit  (the GBA "RLUnCom   0  <-- decompression
+  0x02000652  0x0B   CpuSet                                           1
+        thumb bl   from 0x02041AE4
+  0x020006C2  0x10   BitUnPack                                        0  <-- decompression
+  0x02000728  0x12   LZ77UnCompReadByCallbackWrite16bit               0  <-- decompression
+  0x02000780  0x11   LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77U   0  <-- decompression
+
+############ ARM7 ############
+_work/arm7.bin -- 159160 bytes
+  25 words / 72 halfwords match the SWI encoding at all
+  0 ARM + 29 THUMB survive the two filters (comment field NN0000,
+  service number <= 0x2B)
+
+  of those, 24 are followed by `bx lr` -- the shape of an SDK
+  SVC wrapper, and the only form that is certainly an instruction.
+
+  SET    SWI    COUNT  SERVICE
+  thumb  0x08       3  SoundBias
+  thumb  0x00       1  SoftReset
+  thumb  0x03       1  Stop/Sleep
+  thumb  0x04       1  IntrWait
+  thumb  0x05       1  VBlankIntrWait
+  thumb  0x06       1  Halt
+  thumb  0x07       1  Sleep
+  thumb  0x09       1  Div
+  thumb  0x0B       1  CpuSet
+  thumb  0x0C       1  CpuFastSet
+  thumb  0x0D       1  Sqrt
+  thumb  0x0E       1  GetCRC16
+  thumb  0x0F       1  IsDebugger
+  thumb  0x10       1  BitUnPack  <-- decompression
+  thumb  0x11       1  LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77UnComp")  <-- decompression
+  thumb  0x12       1  LZ77UnCompReadByCallbackWrite16bit  <-- decompression
+  thumb  0x13       1  HuffUnCompReadByCallback  <-- decompression
+  thumb  0x14       1  RLUnCompReadNormalWrite8bit  (the GBA "RLUnComp")  <-- decompression
+  thumb  0x15       1  RLUnCompReadByCallbackWrite16bit  <-- decompression
+  thumb  0x1A       1  ?
+  thumb  0x1B       1  ?
+  thumb  0x1C       1  ?
+
+  decompression wrappers linked into this image:
+    0x0238B8E0  svc #0x10 ; bx lr   BitUnPack
+    0x0238B8E4  svc #0x11 ; bx lr   LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77UnComp")
+    0x0238B8E8  svc #0x12 ; bx lr   LZ77UnCompReadByCallbackWrite16bit
+    0x0238B8EC  svc #0x13 ; bx lr   HuffUnCompReadByCallback
+    0x0238B8F0  svc #0x14 ; bx lr   RLUnCompReadNormalWrite8bit  (the GBA "RLUnComp")
+    0x0238B8F4  svc #0x15 ; bx lr   RLUnCompReadByCallbackWrite16bit
+
+  A wrapper being *linked* says only that the SDK library was
+  linked.  The question is whether anything calls it, so every
+  branch in the image is resolved and counted against each one.
+  3783 distinct branch targets in this image
+
+  WRAPPER      SWI    SERVICE                                        CALL SITES
+  0x0238B888  0x00   SoftReset                                        0
+  0x0238B88C  0x03   Stop/Sleep                                       0
+  0x0238B896  0x04   IntrWait                                         0
+  0x0238B8A2  0x05   VBlankIntrWait                                   0
+  0x0238B8A6  0x06   Halt                                             0
+  0x0238B8AA  0x07   Sleep                                            0
+  0x0238B8AE  0x08   SoundBias                                        0
+  0x0238B8B6  0x08   SoundBias                                        0
+  0x0238B8BE  0x08   SoundBias                                        0
+  0x0238B8C2  0x09   Div                                              0
+  0x0238B8CC  0x0B   CpuSet                                           0
+  0x0238B8D0  0x0C   CpuFastSet                                       0
+  0x0238B8D4  0x0D   Sqrt                                             0
+  0x0238B8D8  0x0E   GetCRC16                                         0
+  0x0238B8DC  0x0F   IsDebugger                                       0
+  0x0238B8E0  0x10   BitUnPack                                        0  <-- decompression
+  0x0238B8E4  0x11   LZ77UnCompReadNormalWrite8bit  (the GBA "LZ77U   0  <-- decompression
+  0x0238B8E8  0x12   LZ77UnCompReadByCallbackWrite16bit               0  <-- decompression
+  0x0238B8EC  0x13   HuffUnCompReadByCallback                         0  <-- decompression
+  0x0238B8F0  0x14   RLUnCompReadNormalWrite8bit  (the GBA "RLUnCom   0  <-- decompression
+  0x0238B8F4  0x15   RLUnCompReadByCallbackWrite16bit                 0  <-- decompression
+  0x0238B8F8  0x1A   ?                                                0
+  0x0238B8FC  0x1B   ?                                                0
+  0x0238B900  0x1C   ?                                                0

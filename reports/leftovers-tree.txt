@@ -1,0 +1,80 @@
+== files whose name says test, debug, dummy, sample or copy ==
+  199 of 6378 files, 13452542 of 127286743 bytes (10.57%)
+     6627478  test/ed.adx
+     4055640  test/op.mods
+       60300  world/f_test04_Room_36.bin
+       58112  world/f_test04_Room_18.bin
+       58060  world/f_test04_Room_46.bin
+       56768  world/f_test04_Room_50.bin
+       56660  world/f_test04_Room_75.bin
+       54520  world/f_test04_Room_04.bin
+       53864  world/f_test04_Room_23.bin
+       52404  world/f_test04_Room_45.bin
+       50244  world/f_test04_Room_53.bin
+       49788  world/f_test04_Room_62.bin
+       49496  world/f_test04_Room_35.bin
+       48976  chara/dummy.bin
+       48480  world/f_test04_Room_43.bin
+       46220  world/f_test04_Room_38.bin
+       46172  world/f_test04_Room_19.bin
+       45268  world/f_test04_Room_54.bin
+       44148  world/f_test04_Room_58.bin
+       44140  world/f_test04_Room_08.bin
+       43520  world/f_test04_Room_33.bin
+       43012  world/f_test04_Room_69.bin
+       42140  world/f_test04_Room_07.bin
+       41020  world/f_test04_Room_37.bin
+       40436  world/f_test04_Room_76.bin
+       40268  world/f_test04_Room_47.bin
+       39916  world/f_test04_Room_28.bin
+       39180  world/f_test04_Room_39.bin
+       37732  world/f_test04_Room_24.bin
+       37384  world/f_test04_Room_55.bin
+
+== members inside the containers, same test ==
+  1023 members, 2799528 bytes
+           4  chara/symbol__mot.bin :: dummy.dat
+         994  world/f_test04_Room_01.bin :: f_test04_Room_01_attr.dat
+          48  world/f_test04_Room_01.bin :: f_test04_Room_01_attr_area.dat
+        4812  world/f_test04_Room_01.bin :: f_test04_Room_01.nsbmd
+         972  world/f_test04_Room_01.bin :: f_test04_Room_01.nsbta
+          16  world/f_test04_Room_01.bin :: f_test04_Room_01.boxtest
+         994  world/f_test04_Room_02.bin :: f_test04_Room_02_attr.dat
+          48  world/f_test04_Room_02.bin :: f_test04_Room_02_attr_area.dat
+        5148  world/f_test04_Room_02.bin :: f_test04_Room_02.nsbmd
+         972  world/f_test04_Room_02.bin :: f_test04_Room_02.nsbta
+          16  world/f_test04_Room_02.bin :: f_test04_Room_02.boxtest
+         994  world/f_test04_Room_03.bin :: f_test04_Room_03_attr.dat
+
+== which file names are mentioned anywhere outside the name table ==
+   The file name table itself is excluded, so a mention means some
+   payload or executable spells the name out.  A name that is never
+   spelled out may still be built at run time with a format string,
+   so this counts *unmentioned*, not *unused*.
+  the image reduces to 14024284 bytes of printable text outside the name table
+  4591 of 6378 file names are not spelled out anywhere else, 87415064 bytes
+      712800  _unnamed/fat0000.bin
+      591079  field/f161.bin
+      586792  field/f162.bin
+      586752  field/f048.bin
+      577312  _unnamed/fat0002.bin
+      526443  field/f049.bin
+      518152  field/f058.bin
+      502559  field/f039.bin
+      478474  field/f033.bin
+      477371  field/f074.bin
+      474075  field/f062.bin
+      457852  field/f078.bin
+      456411  field/f080.bin
+      442026  field/f079.bin
+      430295  field/f081.bin
+      422656  field/f027.bin
+      422013  field/f077.bin
+      418712  field/f021.bin
+      401642  field/f055.bin
+      392977  field/f056.bin
+      380476  field/f050.bin
+      368463  field/f076.bin
+      364019  field/f002.bin
+      346693  field/f075.bin
+      327090  field/f020.bin

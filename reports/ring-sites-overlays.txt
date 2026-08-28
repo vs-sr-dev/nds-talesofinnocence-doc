@@ -1,0 +1,84 @@
+############ OVERLAY 0 (base 0x02120E60) ############
+_work/overlay_0.bin
+  712800 bytes, load address 0x02120E60, ARM/THUMB
+  looking for 4070, 4071, 4078, 4079, 4080
+
+  encodability as an ARM data-processing immediate (8 bits rotated by an even amount):
+     4070 (0xFE6)  NO   -- must be a literal-pool word
+     4071 (0xFE7)  NO   -- must be a literal-pool word
+     4078 (0xFEE)  NO   -- must be a literal-pool word
+     4079 (0xFEF)  NO   -- must be a literal-pool word
+     4080 (0xFF0)  YES  0xFF ror #28
+
+  pass 1 -- immediate fields
+       22350 ARM data-processing instructions with an immediate operand
+       56540 THUMB instructions carrying a literal
+           0 hits
+
+  pass 2 -- 32-bit words in the literal pool
+      178200 aligned words scanned
+           1 ARM + 6246 THUMB PC-relative loads, 5744 distinct targets
+           0 hits
+
+  no 4070 or 4071 or 4078 or 4079 or 4080 anywhere in this image, in either encoding.
+  By section 7 of the codec specification that is evidence the
+  decoder is not present, not merely that it was not found --
+  and on ARM the literal-pool pass is the half that matters,
+  because the two cursors cannot be encoded as immediates.
+
+############ OVERLAY 1 (base 0x02120E60) ############
+_work/overlay_1.bin
+  577312 bytes, load address 0x02120E60, ARM/THUMB
+  looking for 4070, 4071, 4078, 4079, 4080
+
+  encodability as an ARM data-processing immediate (8 bits rotated by an even amount):
+     4070 (0xFE6)  NO   -- must be a literal-pool word
+     4071 (0xFE7)  NO   -- must be a literal-pool word
+     4078 (0xFEE)  NO   -- must be a literal-pool word
+     4079 (0xFEF)  NO   -- must be a literal-pool word
+     4080 (0xFF0)  YES  0xFF ror #28
+
+  pass 1 -- immediate fields
+       18419 ARM data-processing instructions with an immediate operand
+       30972 THUMB instructions carrying a literal
+           0 hits
+
+  pass 2 -- 32-bit words in the literal pool
+      144328 aligned words scanned
+        1053 ARM + 6984 THUMB PC-relative loads, 6586 distinct targets
+           0 hits
+
+  no 4070 or 4071 or 4078 or 4079 or 4080 anywhere in this image, in either encoding.
+  By section 7 of the codec specification that is evidence the
+  decoder is not present, not merely that it was not found --
+  and on ARM the literal-pool pass is the half that matters,
+  because the two cursors cannot be encoded as immediates.
+
+############ OVERLAY 2 (base 0x02120E60) ############
+_work/overlay_2.bin
+  89856 bytes, load address 0x02120E60, ARM/THUMB
+  looking for 4070, 4071, 4078, 4079, 4080
+
+  encodability as an ARM data-processing immediate (8 bits rotated by an even amount):
+     4070 (0xFE6)  NO   -- must be a literal-pool word
+     4071 (0xFE7)  NO   -- must be a literal-pool word
+     4078 (0xFEE)  NO   -- must be a literal-pool word
+     4079 (0xFEF)  NO   -- must be a literal-pool word
+     4080 (0xFF0)  YES  0xFF ror #28
+
+  pass 1 -- immediate fields
+        3270 ARM data-processing instructions with an immediate operand
+        4230 THUMB instructions carrying a literal
+           0 hits
+
+  pass 2 -- 32-bit words in the literal pool
+       22464 aligned words scanned
+          92 ARM + 532 THUMB PC-relative loads, 512 distinct targets
+           0 hits
+
+  no 4070 or 4071 or 4078 or 4079 or 4080 anywhere in this image, in either encoding.
+  By section 7 of the codec specification that is evidence the
+  decoder is not present, not merely that it was not found --
+  and on ARM the literal-pool pass is the half that matters,
+  because the two cursors cannot be encoded as immediates.
+

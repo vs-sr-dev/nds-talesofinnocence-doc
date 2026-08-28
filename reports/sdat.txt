@@ -1,0 +1,23 @@
+ToI.sdat -- 8732192 bytes
+  magic b'SDAT', BOM 0xFEFF, version 0x0100
+  declared size 8732192, header 64 bytes, 4 blocks
+    SYMB   at 0x00000040, 20245 bytes
+    INFO   at 0x00004F58, 9324 bytes
+    FAT    at 0x000073C4, 8268 bytes
+    FILE   at 0x00009410, 8694288 bytes
+  SYMB present: yes
+    SEQ         49 entries,    49 named
+    SEQARC      20 entries,    20 named
+    BANK        69 entries,    69 named
+    WAVEARC     68 entries,    68 named
+    PLAYER      11 entries,    11 named
+    GROUP       89 entries,    89 named
+    PLAYER2      2 entries,     2 named
+    STRM       314 entries,   314 named
+  FAT members: 516
+    b'STRM'    310
+    b'SBNK'     69
+    b'SWAR'     68
+    b'SSEQ'     49
+    b'SSAR'     20
+  member bytes: 8694272

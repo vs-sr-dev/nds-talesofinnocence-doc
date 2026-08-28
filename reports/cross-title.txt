@@ -1,0 +1,83 @@
+image 134217728 bytes
+expected chance hits for a needle of length L: 0.0312 (L=4), 8.0 (L=3)
+
+== other titles' names, as substrings of a file name ==
+   (the name table is 6375 names; a hit here is not a chance event)
+  Destiny 1997     stan         1 files: charastand.arc
+  Eternia 2000     ras          1 files: charastand.arc
+
+== other titles' names, anywhere in the image ==
+  Phantasia 1995   MINT            2 hits (chance at this length: 0.03)
+  Phantasia 1995   suzu            2 hits (chance at this length: 0.03)
+  Phantasia 1995   SUZU            4 hits (chance at this length: 0.03)
+  Destiny 1997     stan           16 hits (chance at this length: 0.03)
+  Destiny 1997     Stan            7 hits (chance at this length: 0.03)
+  Eternia 2000     rid            18 hits (chance at this length: 8.00)
+  Eternia 2000     RID            15 hits (chance at this length: 8.00)
+  Eternia 2000     Rid             3 hits (chance at this length: 8.00)
+  Eternia 2000     chat           17 hits (chance at this length: 0.03)
+  Eternia 2000     Chat          783 hits (chance at this length: 0.03)
+  Eternia 2000     ras            27 hits (chance at this length: 8.00)
+  Eternia 2000     RAS            16 hits (chance at this length: 8.00)
+  Destiny 2 2002   LONI            4 hits (chance at this length: 0.03)
+  Rebirth 2004     mao             5 hits (chance at this length: 8.00)
+  Rebirth 2004     MAO            14 hits (chance at this length: 8.00)
+  Rebirth 2004     Mao             4 hits (chance at this length: 8.00)
+  Legendia 2005    Norma           1 hits (chance at this length: 0.00)
+  Legendia 2005    jay             8 hits (chance at this length: 8.00)
+  Legendia 2005    JAY            12 hits (chance at this length: 8.00)
+  Legendia 2005    Jay             3 hits (chance at this length: 8.00)
+  Abyss 2005       tear            2 hits (chance at this length: 0.03)
+  Abyss 2005       guy             6 hits (chance at this length: 8.00)
+  Abyss 2005       GUY            11 hits (chance at this length: 8.00)
+  Abyss 2005       Guy             1 hits (chance at this length: 8.00)
+
+== project tags ==
+  TO7           7 hits, chance 8.00
+  TO8           2 hits, chance 8.00
+  ToR           7 hits, chance 8.00
+  ToL           7 hits, chance 8.00
+  tox           9 hits, chance 8.00
+  tor_          0 hits, chance 0.03
+  no_se_        0 hits, chance 0.00
+  TOP          18 hits, chance 8.00
+  TOD           7 hits, chance 8.00
+  TOE          11 hits, chance 8.00
+  TOS          17 hits, chance 8.00
+  ToD2          0 hits, chance 0.03
+  TOT          45 hits, chance 8.00
+  ToT          20 hits, chance 8.00
+
+== the developing studio, and studios generally ==
+  Wolf                3 hits, chance 0.0312
+  namco               8 hits, chance 0.0001
+  Sonic               2 hits, chance 0.0001
+
+== the names *inside* the Nitro containers ==
+   A model carries its own texture, material and palette names in a
+   dictionary of sixteen-byte zero-padded strings.  Those are the
+   names the artist typed, and they outlive a file being renamed.
+   13950 distinct internal names across 6664 Nitro files
+   Eternia 2000     rid        base_bridge (4x, first in f_test04_Room_23.bin::f_test04_Room_23.nsbmd), m040_bridge (4x, first in f040.bin::m040_03_room_01.nsbmd), m040_bridge_pl (4x, first in f040.bin::m040_03_room_01.nsbmd)
+   Eternia 2000     ras        _m040_grass01 (4x, first in f040.bin::m040_03_room_01.nsbmd), _m040_grass02 (4x, first in f040.bin::m040_03_room_01.nsbmd), _m040_grass03 (3x, first in f040.bin::m040_03_room_01.nsbmd), m002_grass (12x, first in f002.bin::m002_regu_19_room_01.nsbmd), m002_grass_pl (12x, first in f002.bin::m002_regu_19_room_01.nsbmd), m043_grass (6x, first in f043.bin::m043_22_room_03.nsbmd)
+
+== date-shaped groups in internal names ==
+
+== byte-identical assets, which is how a shared asset shows ==
+  5595 distinct contents in 6375 files; 246 contents repeat, 4112820 duplicate bytes
+  the largest repeats:
+    58 copies of    15360 bytes: navimap_0.nbfc, navimap_1.nbfc, navimap_10.nbfc, navimap_11.nbfc, navimap_12.nbfc, navimap_13.nbfc, navimap_14.nbfc, navimap_15.nbfc
+    10 copies of    35968 bytes: btmap_027_mdl.bin, btmap_028_mdl.bin, btmap_029_mdl.bin, btmap_030_mdl.bin, btmap_031_mdl.bin, btmap_032_mdl.bin, btmap_033_mdl.bin, btmap_034_mdl.bin
+    10 copies of    17100 bytes: btmap_027_tex.bin, btmap_028_tex.bin, btmap_029_tex.bin, btmap_030_tex.bin, btmap_031_tex.bin, btmap_032_tex.bin, btmap_033_tex.bin, btmap_034_tex.bin
+     2 copies of   152720 bytes: f089.bin, f091.bin
+    11 copies of     8100 bytes: 54.nsbca, 54.nsbca, 54.nsbca, 54.nsbca, 54.nsbca, 54.nsbca, 54.nsbca, 54.nsbca
+    13 copies of     5956 bytes: 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca
+    13 copies of     5136 bytes: 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca
+    11 copies of     6124 bytes: 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca
+    12 copies of     4932 bytes: 22.nsbca, 22.nsbca, 22.nsbca, 22.nsbca, 22.nsbca, 22.nsbca, 22.nsbca, 22.nsbca
+    11 copies of     5052 bytes: 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca, 29.nsbca
+    13 copies of     4176 bytes: 51.nsbca, 51.nsbca, 51.nsbca, 51.nsbca, 51.nsbca, 51.nsbca, 51.nsbca, 51.nsbca
+    13 copies of     4164 bytes: 02.nsbca, 02.nsbca, 02.nsbca, 02.nsbca, 02.nsbca, 02.nsbca, 02.nsbca, 02.nsbca
+     6 copies of     9408 bytes: 53.nsbca, 53.nsbca, 53.nsbca, 53.nsbca, 53.nsbca, 53.nsbca
+    10 copies of     4828 bytes: 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca, 01.nsbca
+    11 copies of     4140 bytes: 52.nsbca, 52.nsbca, 52.nsbca, 52.nsbca, 52.nsbca, 52.nsbca, 52.nsbca, 52.nsbca

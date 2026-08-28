@@ -1,0 +1,9 @@
+banner offset  0x247C00
+banner version 0x0001
+banner crc     0x30F0  (recomputed: OK)
+  ja  'Tales of Innocence\nバンダイナムコゲームス'
+  en  'Tales of Innocence\nバンダイナムコゲームス'
+  fr  'Tales of Innocence\nバンダイナムコゲームス'
+  de  'Tales of Innocence\nバンダイナムコゲームス'
+  it  'Tales of Innocence\nバンダイナムコゲームス'
+  es  'Tales of Innocence\nバンダイナムコゲームス'
