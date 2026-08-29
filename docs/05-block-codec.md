@@ -214,3 +214,56 @@ not this one.
 So the row this build contributes to section 6 reads **"no — and the platform
 is now excluded as the explanation"**, and the sentence Tempest could not
 finish becomes: the boundary is not the machine.
+
+
+## The third ARM target is 64-bit, and it inverts the rule this page rests on
+
+*Tales of Luminaria* (Android, 2021) is the corpus's third ARM machine after
+these two cartridges, and its first 64-bit one. It matters here because the
+argument on this page — that on ARM the constant scan has to become **two**
+scans, because 4078 and 4079 cannot be encoded as data-processing immediates
+and reach an image only as literal-pool words — **is a fact about ARM32 and not
+about ARM**.
+
+| Constant | ARM32 data-processing immediate | AArch64 |
+|---|---|---|
+| 4070 (`0xFE6`) | **no** | `movz`, and `add`/`sub`/`cmp` |
+| 4071 (`0xFE7`) | **no** | `movz`, and `add`/`sub`/`cmp` |
+| **4078 (`0xFEE`)** | **no** | **`movz`**, and `add`/`sub`/`cmp` |
+| **4079 (`0xFEF`)** | **no** | **`movz`**, and `add`/`sub`/`cmp` |
+| 4080 (`0xFF0`) | yes, `0xFF ror #28` | `movz`, `add`/`sub`/`cmp`, **and the bitmask immediate** |
+| 4095 (`0xFFF`) | **no** | `movz`, `add`/`sub`, **and the bitmask immediate** |
+| 4096 (`0x1000`) | yes, `1 ror #20` | `movz` and the bitmask immediate |
+
+`movz`/`movk`/`movn` carry a **16-bit** immediate and `add`/`sub`/`cmp` carry
+twelve, so on AArch64 all five constants fit a single instruction and **a
+one-pass immediate scan is a complete search** — which is exactly what this page
+says it is not, on this machine. The ring mask `& 0x0FFF` also becomes a plain
+logical immediate there, where here it had to be a literal-pool word or an
+`lsl #20` / `lsr #20` pair.
+
+So the rule to carry forward is not "ARM needs two scans". It is **check what
+the target's immediate field can hold before deciding how many passes the scan
+needs**, and print the encodability table with the results either way. The
+tool that does both — this page's `ring_sites.py`, extended — is
+[`ring_sites.py --arm64`](https://github.com/vs-sr-dev/android-talesofluminaria-doc/blob/main/tools/ring_sites.py),
+and it carries a `--selftest` that hand-assembles every AArch64 form it looks
+for, which caught its own test vectors being wrong twice before it produced any
+output.
+
+**The denominators are not comparable, and that is the other half of the
+point.** This cartridge's scan covers a whole executable image, and every byte
+of it is code. On the Android target, `libil2cpp.so` is 42.71% of the package
+and contains **zero AArch64 `ret` in 73,309,724 bytes**, against 58,853 in
+`libunity.so` from the same package and the same toolchain — so the scan there
+returns nothing over an image that is not code, and the result has to be
+reported as **a denominator of zero** rather than as a negative. Before a
+constant scan on any target, measure whether the bytes are instructions:
+[`codedensity.py`](https://github.com/vs-sr-dev/android-talesofluminaria-doc/blob/main/tools/codedensity.py).
+
+The Android build is a negative like this one, with a different reason behind
+it: it runs Unity 2019.4.16f1 with IL2CPP and has no compressor of its own at
+all —  `ZSTD`, `zstd`, `Zstandard` and the Zstandard frame magic all score zero
+over its 299,304,225 expanded bytes, and everything in it is either stored raw
+or deflated by the zip.
+[android-talesofluminaria-doc](https://github.com/vs-sr-dev/android-talesofluminaria-doc).
