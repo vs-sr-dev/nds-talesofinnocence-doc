@@ -95,6 +95,41 @@ developers, not about the reach of the codebase** — and what remains open
 is not a platform question at all but a date: the codec's last confirmed
 appearance is *Tales of the Abyss*, 25 November 2005, and its first confirmed
 absence from the line is June 2008.
+
+**Update, and the date went away.** *Tales of Vesperia* (Xbox 360, executable
+stamped 2008-06-19, disc volume 2008-06-20 — six days before *Ratatosk* shipped)
+carries the codec in the 1997 shape, 8,255 blocks of 8,255. There is no interval
+left in which the line might have dropped it, because it had not been dropped
+when the interval ended: two projects from one line, six days apart in
+mastering, made opposite decisions.
+
+**Second update, back on this machine.** *Tales of Hearts* (Nintendo DS, 18
+December 2008) is the third DS cartridge in the corpus and the first carrying
+the line's own project number — `TO9`, after `TO7` (*Abyss*) and `TO8`
+(*Vesperia*) — and it does not carry the codec. It shipped as **two cartridges
+on one day**, which are one build (28,662 of 28,679 payloads byte-identical), and
+the scan is the largest on this machine: 201,427 ARM immediates, 106,319 THUMB
+literals, 713,016 aligned words, 27,133 resolved load targets, and **0 blocks in
+47,195 payloads and 376,083,362 bytes** on each.
+
+Two things it changes for this cartridge specifically:
+
+* **step zero stopped being a formality.** Three of its five modules being
+  uncompressed was luck as much as method: *Hearts* packs **32 of its 33
+  modules**, and the corpus's `BLZ` decompressor — which had never been executed,
+  because neither this cartridge nor *Tempest* had a packed module — turned out
+  to be wrong in two ways, both of which fail in the direction of *this module is
+  not packed*;
+* the **`stan` / `dimlos` question** gains a third data point. *Hearts* has an
+  unreferenced eighth entry in a seven-entry family of party portraits named
+  `STAN`, and **zero** `dimlos`. Three cartridges, three different `stan`
+  results, and `dimlos` on exactly one of them.
+
+And what it does *not* settle is the same thing this cartridge could not:
+*Hearts* names its developer nowhere either, in any of three alphabets, and was
+compiled with RTTI off — five C++ names in 2,852,064 bytes of plaintext and all
+five the standard library's, where this cartridge carries 1,047.
+[nds-talesofhearts-doc](https://github.com/vs-sr-dev/nds-talesofhearts-doc).
 [wii-talesofsymphoniadotnw-doc](https://github.com/vs-sr-dev/wii-talesofsymphoniadotnw-doc)
 
 ## The `EZBIND` tag at `+0x0C`

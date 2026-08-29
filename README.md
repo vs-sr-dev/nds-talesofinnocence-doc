@@ -32,17 +32,18 @@ This is that second image. Same platform, same publisher, one year later, a
 **third** studio outside the Namco Tales Studio line. Four outcomes were
 possible and none was assumed. The answer:
 
-| | Tempest, 2006 | **Innocence, 2007** |
-|---|---|---|
-| the *Tales* block codec | absent | **absent** |
-| 4078 / 4079 / 4070 / 4071 / 4080, either ARM encoding | 0 for four of them; six 4080 sites, four of them a 4,096-scaled cosine table | **0 — not one of the five, anywhere** |
-| BIOS decompression wrappers linked / called | 12 / **0** | 12 / **0** |
-| data in a BIOS compression format | **0 files of 4,712** | **106 of 6,378**, 102 of them `LZ77`, 16.9 MB → 32.1 MB |
-| a container | none | **1,344 `EZBIND` archives, 9,646 members, 60.4 MB** |
-| the whole image through deflate | 52.6% | **73.5%** |
-| cartridge unused | **41.3%** | **3.2%** |
-| media share | 13.22% | **51.40%**, with **2.81 hours of voice** |
-| the developer named | nowhere | **three ways** |
+| | Tempest, 2006 | **Innocence, 2007** | Hearts, 2008 |
+|---|---|---|---|
+| the *Tales* block codec | absent | **absent** | absent |
+| 4078 / 4079 / 4070 / 4071 / 4080, either ARM encoding | 0 for four of them; six 4080 sites, four of them a 4,096-scaled cosine table | **0 — not one of the five, anywhere** | 0 for four; seven 4080 sites, four of them a 4,096-scaled cosine table again |
+| modules, and how many were packed | 2, none packed | 5, none packed | **33, of which 32 `BLZ`-packed** |
+| BIOS decompression wrappers linked / called | 12 / **0** | 12 / **0** | 6 / **0** |
+| data in a BIOS compression format | **0 files of 4,712** | **106 of 6,378**, 102 of them `LZ77`, 16.9 MB → 32.1 MB | 11 files of 5,145 — but **5,280 streams inside the containers**, 61.7 MB → 123.2 MB |
+| a container | none | **1,344 `EZBIND` archives, 9,646 members, 60.4 MB** | 2,492 `FPS4` archives and 1,508 `V154` objects |
+| the whole image through deflate | 52.6% | **73.5%** | 78.24% |
+| cartridge unused | **41.3%** | **3.2%** | 7.49% / 9.27% |
+| media share | 13.22% | **51.40%**, with **2.81 hours of voice** | 51.39% / 49.61%, with **5 h 56 m of voice** |
+| the developer named | nowhere | **three ways** | nowhere |
 
 So the codec is absent from both, **and the platform is excluded as the
 explanation.** A Nintendo DS *Tales* cartridge can compress, does compress, and
@@ -55,6 +56,16 @@ What it is about is still not fully settled *on this machine*, and
 line, so "the codec travels with that codebase" survives this cartridge
 untouched. This repository asked for a title *from* that line and said there was
 not one on the DS.
+
+**A third cartridge has since been measured and it is the nearest thing to
+one.** *Tales of Hearts* (Nintendo DS, 18 December 2008) carries the project tag
+`TO9` — the number after *Tales of the Abyss*'s `TO7` and *Tales of Vesperia*'s
+`TO8`, both line builds that carry the codec — and it does not carry the codec
+either. But it **names its developer nowhere**, in any of three alphabets, and
+was compiled with RTTI off, so it supplies a project number in the right place
+and no hand attached to it. The question this repository asked is narrowed by
+that cartridge and not closed by it.
+[nds-talesofhearts-doc](https://github.com/vs-sr-dev/nds-talesofhearts-doc).
 
 **It was answered off the DS.** *Tales of Symphonia: Ratatosk no Kishi* (Wii,
 2008) is the direct sequel to the corpus's only PowerPC positive, from inside
